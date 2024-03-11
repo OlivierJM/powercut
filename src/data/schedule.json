@@ -1,0 +1,71 @@
+[
+  {
+    "Province": "Lusaka Province",
+    "Schedules": [
+      {
+        "Group": "A",
+        "Date": "2024-03-11",
+        "Start Time": "0:00",
+        "End Time": "2:00"
+      },
+      {
+        "Group": "B",
+        "Date": "2024-03-11",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Group": "C",
+        "Date": "2024-03-12",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Group": "C",
+        "Date": "2024-03-13",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Group": "D",
+        "Date": "2024-03-11",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Group": "D",
+        "Date": "2024-03-12",
+        "Start Time": "9:00",
+        "End Time": "17:00"
+      },
+      {
+        "Group": "D",
+        "Date": "2024-03-13",
+        "Start Time": "9:00",
+        "End Time": "17:00"
+      },
+      {
+        "Group": "E",
+        "Date": "2024-03-11",
+        "Start Time": "15:00",
+        "End Time": "23:00"
+      },
+      {
+        "Group": "E",
+        "Date": "2024-03-12",
+        "Start Time": "15:00",
+        "End Time": "23:00"
+      },
+      {
+        "Group": "E",
+        "Date": "2024-03-13",
+        "Start Time": "15:00",
+        "End Time": "23:00"
+      }
+    ]
+  },
+  {
+    "Province": "Copperbelt Province",
+    "Schedules": []
+  }
+]
