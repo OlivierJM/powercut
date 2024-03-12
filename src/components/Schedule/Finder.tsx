@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { Autocomplete, Button, ActionIcon, Container, Title, Group } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { Cross1Icon } from '@radix-ui/react-icons';
@@ -27,7 +27,7 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
-  const findSchedule = () => {
+  const findSchedule = useCallback(() => {
     let foundGroup = '';
 
     // Find the province and group
@@ -66,7 +66,7 @@ const Finder = () => {
     }));
 
     setUpcomingSchedules(filteredSchedules);
-  };
+  }, [area]);
 
   return (
     <Container size={600} my={40}>
@@ -96,7 +96,7 @@ const Finder = () => {
       <br />
       {upcomingSchedules.length ? upcomingSchedules.map((schedule, index) => (
         <ScheduleCard key={index} data={schedule} area={area} />
-      )) : 'No upcoming schedules found for this area'}
+      )) : area && 'No upcoming schedules found for this area'}
     </Container>
   );
 };
