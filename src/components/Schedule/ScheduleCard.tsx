@@ -65,7 +65,7 @@ const ScheduleCard = ({ data, area }: ScheduleCardProps) => {
       mb={10}
     >
       <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-        <Text>Group {data?.group} - {area}</Text>
+        <Text>{area}</Text>
         <Badge color="pink" variant="light">
           {data?.date}
         </Badge>

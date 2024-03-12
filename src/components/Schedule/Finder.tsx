@@ -55,22 +55,20 @@ const Finder = () => {
     const startOfCurrentDay = startOfToday();
     const filteredSchedules = provinceSchedules
       .filter((sch) => sch.Group === foundGroup.split(' ')[1])
-      .filter((sch) =>
-         !isBefore(sch.Date, startOfCurrentDay)
-    )
-    .map((sch) => ({
+      .filter((sch) => !isBefore(sch.Date, startOfCurrentDay))
+      .map((sch) => ({
         group: sch.Group,
         date: sch.Date,
         startTime: sch['Start Time'],
         endTime: sch['End Time'],
-    }));
+      }));
 
     setUpcomingSchedules(filteredSchedules);
   }, [area]);
 
   return (
     <Container size={600} my={40}>
-      <Title mb="md">Find Load Shedding Schedule</Title>
+      {/* <Title mb="md">Find Load Shedding Schedule</Title> */}
       <Autocomplete
         placeholder="Search for an area..."
         data={allAreas}
@@ -82,7 +80,10 @@ const Finder = () => {
             variant="transparent"
             size="sm"
             aria-label="clear-area"
-            onClick={() => setArea('')}
+            onClick={() => {
+              setArea('');
+              setUpcomingSchedules([]);
+            }}
           >
             <Cross1Icon style={{ width: '70%', height: '70%' }} />
           </ActionIcon>
@@ -91,12 +92,16 @@ const Finder = () => {
         mb="md"
       />
       <Group mb="md">
-        <Button onClick={findSchedule}>Find Schedule</Button>
+        <Button disabled={!area} onClick={findSchedule}>
+          Find Schedule
+        </Button>
       </Group>
       <br />
-      {upcomingSchedules.length ? upcomingSchedules.map((schedule, index) => (
-        <ScheduleCard key={index} data={schedule} area={area} />
-      )) : area && 'No upcoming schedules found for this area'}
+      {upcomingSchedules.length && area
+        ? upcomingSchedules.map((schedule, index) => (
+            <ScheduleCard key={index} data={schedule} area={area} />
+          ))
+        : null}
     </Container>
   );
 };
