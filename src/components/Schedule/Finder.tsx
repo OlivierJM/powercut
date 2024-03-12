@@ -84,6 +84,7 @@ const Finder = () => {
             variant="transparent"
             size="sm"
             aria-label="clear-area"
+            disabled={!area}
             onClick={() => {
               setArea('');
               setUpcomingSchedules([]);
