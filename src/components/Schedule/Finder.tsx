@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import { Autocomplete, Button, ActionIcon, Container, Title, Group } from '@mantine/core';
+import { Autocomplete, Button, ActionIcon, Container, Text, Center } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import areas from '../../data/areas.json';
@@ -11,6 +11,7 @@ interface ScheduleTypes {
   date: string;
   startTime: string;
   endTime: string;
+  area: string;
 }
 
 const Finder = () => {
@@ -61,6 +62,7 @@ const Finder = () => {
         date: sch.Date,
         startTime: sch['Start Time'],
         endTime: sch['End Time'],
+        area,
       }));
 
     setUpcomingSchedules(filteredSchedules);
@@ -68,12 +70,14 @@ const Finder = () => {
 
   return (
     <Container size={600} my={40}>
-      {/* <Title mb="md">Find Load Shedding Schedule</Title> */}
       <Autocomplete
         placeholder="Search for an area..."
         data={allAreas}
         value={area}
-        onChange={setArea}
+        onChange={(value) => {
+          setArea(value);
+          setUpcomingSchedules([]);
+        }}
         rightSectionPointerEvents="all"
         rightSection={
           <ActionIcon
@@ -91,17 +95,23 @@ const Finder = () => {
         size="md"
         mb="md"
       />
-      <Group mb="md">
+      <Center mb="md">
         <Button disabled={!area} onClick={findSchedule}>
           Find Schedule
         </Button>
-      </Group>
+      </Center>
       <br />
       {upcomingSchedules.length && area
-        ? upcomingSchedules.map((schedule, index) => (
-            <ScheduleCard key={index} data={schedule} area={area} />
-          ))
+        ? upcomingSchedules.map((schedule, index) => <ScheduleCard key={index} data={schedule} />)
         : null}
+
+      <Text size="sm" mt={20}>
+        Disclaimer: This schedule is owned by Zesco, it may not be accurate to the minute.
+      </Text>
+      <br />
+      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
+        Made with ♥ by OlivierJM
+      </Text>
     </Container>
   );
 };

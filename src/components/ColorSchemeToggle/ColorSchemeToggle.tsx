@@ -1,13 +1,21 @@
-import { Button, Group, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, useMantineColorScheme } from '@mantine/core';
+import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
 
 export function ColorSchemeToggle() {
-  const { setColorScheme } = useMantineColorScheme();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <Group justify="center" mt="xl">
-      <Button onClick={() => setColorScheme('light')}>Light</Button>
-      <Button onClick={() => setColorScheme('dark')}>Dark</Button>
-      <Button onClick={() => setColorScheme('auto')}>Auto</Button>
-    </Group>
+    <ActionIcon
+      onClick={() => toggleColorScheme()}
+      title="Toggle color scheme"
+      size="lg"
+      ml={30}
+      style={(theme) => ({
+        backgroundColor: 'transparent',
+        color: colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
+      })}
+    >
+      {colorScheme !== 'dark' ? <SunIcon /> : <MoonIcon />}
+    </ActionIcon>
   );
 }

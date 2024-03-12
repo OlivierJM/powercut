@@ -1,5 +1,6 @@
-import { Title, Text } from '@mantine/core';
+import { Title, Text, Center } from '@mantine/core';
 import classes from './Welcome.module.css';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 export function Welcome() {
   return (
@@ -9,6 +10,9 @@ export function Welcome() {
           Powercut
         </Text>
       </Title>
+      <Center>
+        <ColorSchemeToggle />
+      </Center>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         Easily track load shedding schedules in your area or elsewhere.
       </Text>

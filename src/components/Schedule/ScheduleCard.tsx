@@ -14,8 +14,8 @@ interface ScheduleCardProps {
     date: string;
     startTime: string;
     endTime: string;
+    area: string;
   };
-  area: string;
 }
 
 const createTimeFromDate = (timeString: string, currentDate: string) => {
@@ -45,7 +45,7 @@ const remainingTime = (scheduleStartDate: Date, currentDate: Date) => {
   return `Starts in approximately ${remainingMinutes} minute(s)`;
 };
 
-const ScheduleCard = ({ data, area }: ScheduleCardProps) => {
+const ScheduleCard = ({ data }: ScheduleCardProps) => {
   const theme = useMantineTheme();
   const currentDate = new Date();
   const scheduleStartDate = createTimeFromDate(data?.startTime, data?.date);
@@ -58,15 +58,10 @@ const ScheduleCard = ({ data, area }: ScheduleCardProps) => {
 
   const timeToGo = remainingTime(scheduleStartDate, currentDate);
   return (
-    <Card
-      shadow="sm"
-      padding="lg"
-      radius="lg"
-      mb={10}
-    >
+    <Card shadow="sm" padding="lg" radius="md" mb={10}>
       <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-        <Text>{area}</Text>
-        <Badge color="pink" variant="light">
+        <Text>{data?.area}</Text>
+        <Badge color={isCurrentlyShedding ? 'red' : 'teal'} variant="light">
           {data?.date}
         </Badge>
       </Group>
@@ -78,13 +73,9 @@ const ScheduleCard = ({ data, area }: ScheduleCardProps) => {
         End Time: {data?.endTime}
       </Text>
 
-      {isCurrentlyShedding ? (
-        <Badge color="red" variant="filled" size="lg">
-          Load Shedding Currently In Progress
-        </Badge>
-      ) : (
-        timeToGo
-      )}
+      <Badge color={isCurrentlyShedding ? 'red' : 'teal'} variant="light" size="lg">
+        {isCurrentlyShedding ? 'Load Shedding Currently In Progress' : timeToGo}
+      </Badge>
     </Card>
   );
 };
