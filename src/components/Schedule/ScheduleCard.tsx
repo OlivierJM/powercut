@@ -8,6 +8,7 @@ import {
   setMinutes,
 } from 'date-fns';
 
+// TODO: Reuse these type
 interface ScheduleCardProps {
   data: {
     group: string;
@@ -18,6 +19,7 @@ interface ScheduleCardProps {
   };
 }
 
+// TODO: Move this into its own file
 const createTimeFromDate = (timeString: string, currentDate: string) => {
   if (!timeString) {
     return new Date();
@@ -31,18 +33,34 @@ const createTimeFromDate = (timeString: string, currentDate: string) => {
   return date;
 };
 
+// TODO: Move this into its own file
 const remainingTime = (scheduleStartDate: Date, currentDate: Date) => {
   const remainingDays = differenceInDays(scheduleStartDate, currentDate);
   const remainingHours = differenceInHours(scheduleStartDate, currentDate) % 24;
   const remainingMinutes = differenceInMinutes(scheduleStartDate, currentDate) % 60;
 
+  if (remainingDays < 0 || remainingHours < 0 || remainingMinutes < 0) {
+    return {
+      text: 'No other Load shedding expected today.',
+      color: 'teal',
+    };
+  }
   if (remainingDays > 0) {
-    return `Starts in approximately ${remainingDays} day(s)`;
+    return {
+      text: `Will start in approximately ${remainingDays} day(s)`,
+      color: 'teal',
+    };
   }
   if (remainingHours > 0) {
-    return `Starts in approximately ${remainingHours} hour(s)`;
+    return {
+      text: `Will start in approximately ${remainingHours} hour(s)`,
+      color: remainingHours < 3 ? 'orange' : 'teal',
+    };
   }
-  return `Starts in approximately ${remainingMinutes} minute(s)`;
+  return {
+    text: `Starts in approximately ${remainingMinutes} minute(s)`,
+    color: remainingMinutes < 30 ? 'red' : 'teal',
+  };
 };
 
 const ScheduleCard = ({ data }: ScheduleCardProps) => {
@@ -61,7 +79,7 @@ const ScheduleCard = ({ data }: ScheduleCardProps) => {
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
       <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
         <Text>{data?.area}</Text>
-        <Badge color={isCurrentlyShedding ? 'red' : 'teal'} variant="light">
+        <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light">
           {data?.date}
         </Badge>
       </Group>
@@ -73,8 +91,8 @@ const ScheduleCard = ({ data }: ScheduleCardProps) => {
         End Time: {data?.endTime}
       </Text>
 
-      <Badge color={isCurrentlyShedding ? 'red' : 'teal'} variant="light" size="lg">
-        {isCurrentlyShedding ? 'Load Shedding Currently In Progress' : timeToGo}
+      <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light" size="lg">
+        {isCurrentlyShedding ? 'Load Shedding Currently In Progress' : timeToGo.text}
       </Badge>
     </Card>
   );

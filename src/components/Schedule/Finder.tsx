@@ -20,11 +20,11 @@ const Finder = () => {
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
-    Object.values(areas).forEach((groups) => {
-      Object.values(groups).forEach((areaList) => {
+    // Object.values(areas['Lusaka Province']).forEach((groups) => { // We will only enable this when we have support for other provinces
+      Object.values(areas['Lusaka Province']).forEach((areaList) => {
         allAreasList.push(...areaList);
       });
-    });
+    // });
     return [...new Set(allAreasList)].sort();
   }, []);
 
@@ -107,7 +107,7 @@ const Finder = () => {
         : null}
 
       <Text size="sm" mt={20}>
-        Disclaimer: This schedule is owned by Zesco, it may not be accurate to the minute.
+        Disclaimer: This schedule is owned by Zesco and may not be 100% accurate.
       </Text>
       <br />
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">

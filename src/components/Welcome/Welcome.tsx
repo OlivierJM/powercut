@@ -5,8 +5,14 @@ import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 export function Welcome() {
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
+      <Title order={4} className={classes.title} ta="center" mt={100}>
+        <Text
+          size="lg"
+          inherit
+          variant="gradient"
+          component="span"
+          gradient={{ from: 'pink', to: 'yellow' }}
+        >
           Powercut
         </Text>
       </Title>
@@ -14,7 +20,8 @@ export function Welcome() {
         <ColorSchemeToggle />
       </Center>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        Easily track load shedding schedules in your area or elsewhere.
+        Easily track load shedding schedules in your area or elsewhere. Currently supports Lusaka
+        only.
       </Text>
     </>
   );
