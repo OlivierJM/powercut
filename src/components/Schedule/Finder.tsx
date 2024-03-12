@@ -1,17 +1,24 @@
-import React, { useState, useMemo } from 'react';
-import { Autocomplete, Button, Select, Container, Title, Group } from '@mantine/core';
+import { useState, useMemo } from 'react';
+import { Autocomplete, Button, ActionIcon, Container, Title, Group } from '@mantine/core';
+import { startOfToday, isBefore } from 'date-fns';
+import { Cross1Icon } from '@radix-ui/react-icons';
 import areas from '../../data/areas.json';
 import schedules from '../../data/schedule.json';
 import ScheduleCard from './ScheduleCard';
 
-const Finder = () => {
-  const [province, setProvince] = useState('');
-  const [area, setArea] = useState('');
-  const [selectedSchedule, setSelectedSchedule] = useState(null);
+interface ScheduleTypes {
+  group: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+}
 
-  // Memoize areas list to avoid recalculating on every render
+const Finder = () => {
+  const [area, setArea] = useState('');
+  const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleTypes[]>([]);
+
   const allAreas = useMemo(() => {
-    const allAreasList = [];
+    const allAreasList = [] as string[];
     Object.values(areas).forEach((groups) => {
       Object.values(groups).forEach((areaList) => {
         allAreasList.push(...areaList);
@@ -20,15 +27,12 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
-  // Memoize provinces list to avoid recalculating on every render
-  const provincesList = useMemo(() => Object.keys(areas), []);
-
   const findSchedule = () => {
     let foundGroup = '';
 
     // Find the province and group
-    const provArea = Object.entries(areas).find(([_, groups]) =>
-      Object.entries(groups).find(([group, ars]) => {
+    const provArea = Object.entries(areas).find(([, groups]) =>
+      Object.entries(groups).some(([group, ars]) => {
         if (ars.includes(area)) {
           foundGroup = group;
           return true;
@@ -37,50 +41,62 @@ const Finder = () => {
       })
     );
 
-    // Find the schedule for the area's group within the selected province
-    const scheduleForArea = schedules
-      .find((s) => s.Province === province)
-      ?.Schedules.find((sch) => sch.Group === foundGroup.split(' ')[1]);
+    if (!provArea) {
+      setUpcomingSchedules([]);
+      return;
+    }
 
-    setSelectedSchedule(
-      scheduleForArea
-        ? {
-            group: scheduleForArea?.Group,
-            date: scheduleForArea?.Date,
-            startTime: scheduleForArea?.['Start Time'],
-            endTime: scheduleForArea?.['End Time'],
-          }
-        : null
-    );
+    const provinceSchedules = schedules.find((s) => s.Province === provArea[0])?.Schedules;
+    if (!provinceSchedules) {
+      setUpcomingSchedules([]);
+      return;
+    }
+
+    const startOfCurrentDay = startOfToday();
+    const filteredSchedules = provinceSchedules
+      .filter((sch) => sch.Group === foundGroup.split(' ')[1])
+      .filter((sch) =>
+         !isBefore(sch.Date, startOfCurrentDay)
+    )
+    .map((sch) => ({
+        group: sch.Group,
+        date: sch.Date,
+        startTime: sch['Start Time'],
+        endTime: sch['End Time'],
+    }));
+
+    setUpcomingSchedules(filteredSchedules);
   };
 
   return (
-    <Container my={40}>
-      <Title align="center" mb="md">
-        Find Load Shedding Schedule
-      </Title>
-      <Select
-        label="Select Province"
-        placeholder="Province"
-        data={provincesList}
-        value={province}
-        onChange={setProvince}
-        searchable
-        clearable
-        mb="md"
-      />
+    <Container size={600} my={40}>
+      <Title mb="md">Find Load Shedding Schedule</Title>
       <Autocomplete
-        label="Search for an area"
-        placeholder="Type to search..."
+        placeholder="Search for an area..."
         data={allAreas}
         value={area}
         onChange={setArea}
+        rightSectionPointerEvents="all"
+        rightSection={
+          <ActionIcon
+            variant="transparent"
+            size="sm"
+            aria-label="clear-area"
+            onClick={() => setArea('')}
+          >
+            <Cross1Icon style={{ width: '70%', height: '70%' }} />
+          </ActionIcon>
+        }
+        size="md"
         mb="md"
       />
-      <Group position="right" mb="md">
+      <Group mb="md">
         <Button onClick={findSchedule}>Find Schedule</Button>
       </Group>
-      {selectedSchedule && <ScheduleCard data={selectedSchedule} />}
+      <br />
+      {upcomingSchedules.length ? upcomingSchedules.map((schedule, index) => (
+        <ScheduleCard key={index} data={schedule} area={area} />
+      )) : 'No upcoming schedules found for this area'}
     </Container>
   );
 };
