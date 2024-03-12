@@ -21,9 +21,9 @@ const Finder = () => {
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
     // Object.values(areas['Lusaka Province']).forEach((groups) => { // We will only enable this when we have support for other provinces
-      Object.values(areas['Lusaka Province']).forEach((areaList) => {
-        allAreasList.push(...areaList);
-      });
+    Object.values(areas['Lusaka Province']).forEach((areaList) => {
+      allAreasList.push(...areaList);
+    });
     // });
     return [...new Set(allAreasList)].sort();
   }, []);
@@ -69,7 +69,7 @@ const Finder = () => {
   }, [area]);
 
   return (
-    <Container size={600} my={40}>
+    <Container my={40} p={30}>
       <Autocomplete
         placeholder="Search for an area..."
         data={allAreas}
@@ -80,18 +80,19 @@ const Finder = () => {
         }}
         rightSectionPointerEvents="all"
         rightSection={
-          <ActionIcon
-            variant="transparent"
-            size="sm"
-            aria-label="clear-area"
-            disabled={!area}
-            onClick={() => {
-              setArea('');
-              setUpcomingSchedules([]);
-            }}
-          >
-            <Cross1Icon style={{ width: '70%', height: '70%' }} />
-          </ActionIcon>
+          Boolean(area) && (
+            <ActionIcon
+              variant="transparent"
+              size="sm"
+              aria-label="clear-area"
+              onClick={() => {
+                setArea('');
+                setUpcomingSchedules([]);
+              }}
+            >
+              <Cross1Icon style={{ width: '70%', height: '70%' }} />
+            </ActionIcon>
+          )
         }
         size="md"
         mb="md"
@@ -107,7 +108,11 @@ const Finder = () => {
         : null}
 
       <Text size="sm" mt={20}>
-        Disclaimer: This schedule is owned by Zesco and may not be 100% accurate.
+        Disclaimer: The schedule used here is{' '}
+        <a href="https://www.zesco.co.zm/assets/LoadManagement/ZESCO_8_hr_Loadshedding%20_Schedule_final.pdf">
+          prepared by Zesco
+        </a>{' '}
+        and may not be 100% accurate.
       </Text>
       <br />
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
