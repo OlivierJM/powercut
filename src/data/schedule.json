@@ -846,7 +846,2716 @@
     ]
   },
   {
-    "Province": "Copperbelt Province",
-    "Schedules": []
+    "Province": "Kitwe",
+    "Schedules": [
+      {
+        "Date": "2024-03-11",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      }
+    ]
+  },
+  {
+    "Province": "Mufulira",
+    "Schedules": [
+      {
+        "Date": "2024-03-11",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "A",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "B",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      }
+    ]
+  },
+  {
+    "Province": "Northwestern Province",
+    "Schedules": [
+      {
+        "Date": "2024-03-11",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "A",
+        "Start Time": "6:00",
+        "End Time": "14:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "B",
+        "Start Time": "14:00",
+        "End Time": "22:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "C",
+        "Start Time": "22:00",
+        "End Time": "6:00"
+      }
+    ]
+  },
+  {
+    "Province": "Ndola",
+    "Schedules": [
+      {
+        "Date": "2024-03-11",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "A",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "B",
+        "Start Time": "13:00",
+        "End Time": "21:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "C",
+        "Start Time": "0:00",
+        "End Time": "8:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "D",
+        "Start Time": "17:00",
+        "End Time": "0:00"
+      }
+    ]
+  },
+  {
+    "Province": "Luanshya",
+    "Schedules": [
+      {
+        "Date": "2024-03-11",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "A",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "A",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "B",
+        "Start Time": "12:00",
+        "End Time": "20:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "B",
+        "Start Time": "5:00",
+        "End Time": "13:00"
+      },
+      {
+        "Date": "2024-03-11",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-12",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-13",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-14",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-15",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-16",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-17",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-18",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-19",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-20",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-21",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-22",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-23",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-24",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-25",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-26",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-27",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-28",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-29",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-30",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-03-31",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-01",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-02",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-03",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-04",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-05",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-06",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      },
+      {
+        "Date": "2024-04-07",
+        "Group": "C",
+        "Start Time": "19:00",
+        "End Time": "4:00"
+      }
+    ]
   }
 ]

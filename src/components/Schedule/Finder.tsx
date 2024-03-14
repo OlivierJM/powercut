@@ -20,11 +20,11 @@ const Finder = () => {
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
-    // Object.values(areas['Lusaka Province']).forEach((groups) => { // We will only enable this when we have support for other provinces
-    Object.values(areas['Lusaka Province']).forEach((areaList) => {
-      allAreasList.push(...areaList);
+    Object.values(areas).forEach((groups) => {
+      Object.values(groups).forEach((areaList) => {
+        allAreasList.push(...areaList);
+      });
     });
-    // });
     return [...new Set(allAreasList)].sort();
   }, []);
 
@@ -107,16 +107,16 @@ const Finder = () => {
         ? upcomingSchedules.map((schedule, index) => <ScheduleCard key={index} data={schedule} />)
         : null}
 
-      <Text size="sm" mt={20}>
+      <Text size="sm" mt={10} ta="center" c="dimmed">
         Disclaimer: The schedule used here is{' '}
         <a href="https://www.zesco.co.zm/assets/LoadManagement/ZESCO_8_hr_Loadshedding%20_Schedule_final.pdf">
           prepared by Zesco
-        </a>{' '}
-        and may not be 100% accurate.
+        </a>{'  '}and may not be 100% accurate.
       </Text>
+
       <br />
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        Made with ♥ by OlivierJM
+      <Text c="dimmed" ta="center" size="lg">
+          Made with ♥ by OlivierJM
       </Text>
     </Container>
   );
