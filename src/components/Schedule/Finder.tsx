@@ -16,6 +16,7 @@ interface ScheduleTypes {
 
 const Finder = () => {
   const [area, setArea] = useState('');
+  const [currentProvince, setCurrentProvince] = useState('');
   const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleTypes[]>([]);
 
   const allAreas = useMemo(() => {
@@ -66,6 +67,7 @@ const Finder = () => {
       }));
 
     setUpcomingSchedules(filteredSchedules);
+    setCurrentProvince(provArea[0]);
   }, [area]);
 
   return (
@@ -103,20 +105,24 @@ const Finder = () => {
         </Button>
       </Center>
       <br />
+
       {upcomingSchedules.length && area
-        ? upcomingSchedules.map((schedule, index) => <ScheduleCard key={index} data={schedule} />)
+        ? upcomingSchedules.map((schedule, index) => (
+            <ScheduleCard key={index} data={schedule} province={currentProvince} />
+          ))
         : null}
 
       <Text size="sm" mt={10} ta="center" c="dimmed">
         Disclaimer: The schedule used here is{' '}
         <a href="https://www.zesco.co.zm/assets/LoadManagement/ZESCO_8_hr_Loadshedding%20_Schedule_final.pdf">
           prepared by Zesco
-        </a>{'  '}and may not be 100% accurate.
+        </a>
+        {'  '}and may not be 100% accurate.
       </Text>
 
       <br />
       <Text c="dimmed" ta="center" size="lg">
-          Made with ♥ by OlivierJM
+        Made with ♥ by OlivierJM
       </Text>
     </Container>
   );

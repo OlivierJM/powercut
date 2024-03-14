@@ -17,6 +17,7 @@ interface ScheduleCardProps {
     endTime: string;
     area: string;
   };
+  province: string;
 }
 
 // TODO: Move this into its own file
@@ -63,7 +64,15 @@ const remainingTime = (scheduleStartDate: Date, currentDate: Date) => {
   };
 };
 
-const ScheduleCard = ({ data }: ScheduleCardProps) => {
+function removeProvince(text: string) {
+    return text.replace(/\sProvince$/, '');
+}
+
+function toTitleCase(text: string) {
+    return text.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   const theme = useMantineTheme();
   const currentDate = new Date();
   const scheduleStartDate = createTimeFromDate(data?.startTime, data?.date);
@@ -78,7 +87,7 @@ const ScheduleCard = ({ data }: ScheduleCardProps) => {
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
       <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-        <Text>{data?.area}</Text>
+        <Text>{`${toTitleCase(data?.area)} - ${removeProvince(province)}`}</Text>
         <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light">
           {data?.date}
         </Badge>

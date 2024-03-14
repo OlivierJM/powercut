@@ -20,8 +20,7 @@ export function Welcome() {
         <ColorSchemeToggle />
       </Center>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl" p={10}>
-        Easily track load shedding schedules in your area or elsewhere. <br />
-        Currently supports Lusaka areas only.
+        Easily track load shedding schedules in your area or elsewhere.
       </Text>
     </>
   );

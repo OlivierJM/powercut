@@ -1864,7 +1864,7 @@
     ]
   },
   {
-    "Province": "Northwestern Province",
+    "Province": "NorthWestern Province",
     "Schedules": [
       {
         "Date": "2024-03-11",
@@ -3097,8 +3097,8 @@
       {
         "Date": "2024-03-18",
         "Group": "A",
-        "Start Time": "5:00",
-        "End Time": "13:00"
+        "Start Time": "12:00",
+        "End Time": "20:00"
       },
       {
         "Date": "2024-03-19",
