@@ -1,5 +1,5 @@
 import { ActionIcon, useMantineColorScheme } from '@mantine/core';
-import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import { IconMoon, IconSunHigh } from '@tabler/icons-react';
 
 export function ColorSchemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -15,7 +15,7 @@ export function ColorSchemeToggle() {
         color: colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
       })}
     >
-      {colorScheme !== 'dark' ? <SunIcon /> : <MoonIcon />}
+      {colorScheme !== 'dark' ? <IconSunHigh /> : <IconMoon />}
     </ActionIcon>
   );
 }

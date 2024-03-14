@@ -1,23 +1,16 @@
 import { useState, useMemo, useCallback } from 'react';
 import { Autocomplete, Button, ActionIcon, Container, Text, Center } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
-import { Cross1Icon } from '@radix-ui/react-icons';
+import { IconX } from '@tabler/icons-react';
 import areas from '../../data/areas.json';
 import schedules from '../../data/schedule.json';
 import ScheduleCard from './ScheduleCard';
-
-interface ScheduleTypes {
-  group: string;
-  date: string;
-  startTime: string;
-  endTime: string;
-  area: string;
-}
+import { ScheduleCardProps } from '@/types';
 
 const Finder = () => {
   const [area, setArea] = useState('');
   const [currentProvince, setCurrentProvince] = useState('');
-  const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleTypes[]>([]);
+  const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleCardProps['data'][]>([]);
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
@@ -92,7 +85,7 @@ const Finder = () => {
                 setUpcomingSchedules([]);
               }}
             >
-              <Cross1Icon style={{ width: '70%', height: '70%' }} />
+              <IconX style={{ width: '70%', height: '70%' }} />
             </ActionIcon>
           )
         }

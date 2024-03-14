@@ -2,11 +2,9 @@ import { render, screen } from '@test-utils';
 import { Welcome } from './Welcome';
 
 describe('Welcome component', () => {
-  it('has correct Vite guide link', () => {
+  it('has correct links', () => {
     render(<Welcome />);
-    expect(screen.getByText('this guide')).toHaveAttribute(
-      'href',
-      'https://mantine.dev/guides/vite/'
-    );
+    expect(screen.getByText('Powercut')).toBeInTheDocument();
+    expect(screen.getByText('Easily track load shedding schedules in your area or elsewhere.')).toBeInTheDocument();
   });
 });

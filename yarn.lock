@@ -2024,15 +2024,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-icons@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@radix-ui/react-icons@npm:1.3.0"
-  peerDependencies:
-    react: ^16.x || ^17.x || ^18.x
-  checksum: 581657680e43fd13ff06e01f963e3afa94671d4ce6c3fb126e2c70c993ab8650faa55286974032dbccfecca4db57308fb66d53771d765887e03600cddee84ae5
-  languageName: node
-  linkType: hard
-
 "@remix-run/router@npm:1.14.0":
   version: 1.14.0
   resolution: "@remix-run/router@npm:1.14.0"
@@ -2198,6 +2189,24 @@ __metadata:
     magic-string: "npm:^0.25.0"
     string.prototype.matchall: "npm:^4.0.6"
   checksum: 4f36a7488cdae2907053a48231430e8e9aa8f1903a96131bf8325786afba3224011f9120164cae75043558bd051881050b071958388fe477927d340b1cc1a066
+  languageName: node
+  linkType: hard
+
+"@tabler/icons-react@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@tabler/icons-react@npm:3.0.3"
+  dependencies:
+    "@tabler/icons": "npm:3.0.3"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 5995fd49507fe7c40248316b1d045c6cf07c0ca1cd59ebdd2c6f0fa83c35f60cc972d045b26ca976ef9c040e0cf50965aa295f1f8e247759ef261315cbce8ec9
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@tabler/icons@npm:3.0.3"
+  checksum: a16a0b99ee1fb9b70b3c7af4c032f1f056f0b976457ac0cac52e47c80abab65b2e0c5a8a522c5183f504bfe95b5cd00d72a4656f56a06fa6b142bfeaffaa6347
   languageName: node
   linkType: hard
 
@@ -6316,7 +6325,7 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:7.6.1"
     "@mantine/hooks": "npm:7.6.1"
-    "@radix-ui/react-icons": "npm:^1.3.0"
+    "@tabler/icons-react": "npm:^3.0.3"
     "@testing-library/dom": "npm:^9.3.3"
     "@testing-library/jest-dom": "npm:^6.1.5"
     "@testing-library/react": "npm:^14.1.2"
