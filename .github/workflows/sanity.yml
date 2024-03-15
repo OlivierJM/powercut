@@ -1,0 +1,45 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn'
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run typecheck
+      run: yarn typecheck
+
+    - name: Check formatting with Prettier
+      run: yarn prettier
+
+    - name: Lint with ESLint
+      run: yarn lint:eslint
+
+    - name: Lint CSS with Stylelint
+      run: yarn lint:stylelint
+
+    - name: Run tests with Vitest
+      run: yarn vitest
+
+    - name: Build the project
+      run: yarn build
