@@ -1,0 +1,7 @@
+# Require admin approval for any change in these files
+
+CODEOWNERS                                                      @olivierjm
+.github/                                                        @olivierjm
+package.json                                                    @olivierjm
+src/data                                                        @olivierjm
+public/                                                         @olivierjm
