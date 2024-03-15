@@ -18,13 +18,13 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
       <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-        <Text>{`${toTitleCase(data?.area)} - ${removeProvince(province)}`}</Text>
-        <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light">
+        <Text data-testid="area-province">{`${toTitleCase(data?.area)} - ${removeProvince(province)}`}</Text>
+        <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light" data-testid="schedule-date">
           {data?.date}
         </Badge>
       </Group>
 
-      <Text size="sm" style={{ marginBottom: 5 }}>
+      <Text size="sm" style={{ marginBottom: 5 }} data-testid="start-time">
         Start Time: {data?.startTime}
       </Text>
       <Text size="sm" style={{ marginBottom: 5 }}>

@@ -9,9 +9,9 @@ export function FAQ() {
     <AppWrapper>
       <div className={classes.wrapper}>
         <Container size="lg">
-          <Grid id="faq-grid" gutter={50}>
+          <Grid data-testid="faq-grid" gutter={50}>
             <Grid.Col span={{ base: 12, md: 6 }}>
-              <Image src={image} alt="Frequently Asked Questions" />
+              <Image src={image} alt="Frequently Asked Questions" data-testid="faq-svg" />
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 6 }}>
               <Title order={2} ta="left" className={classes.title}>
@@ -20,7 +20,7 @@ export function FAQ() {
 
               <Accordion chevronPosition="right" defaultValue="my-location" variant="separated">
                 {questions.map((question, index) => (
-                  <Accordion.Item key={index} className={classes.item} value={question.value}>
+                  <Accordion.Item key={index} className={classes.item} data-testid="question-item" value={question.value}>
                     <Accordion.Control>{question.question}</Accordion.Control>
                     <Accordion.Panel>{question.answer}</Accordion.Panel>
                   </Accordion.Item>
