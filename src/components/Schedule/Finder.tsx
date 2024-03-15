@@ -2,8 +2,8 @@ import { useState, useMemo, useCallback } from 'react';
 import { Autocomplete, Button, ActionIcon, Container, Text, Center } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { IconX } from '@tabler/icons-react';
-import areas from '../../data/areas.json';
-import schedules from '../../data/schedule.json';
+import areas from '@/data/areas.json';
+import schedules from '@/data/schedule.json';
 import ScheduleCard from './ScheduleCard';
 import { ScheduleCardProps } from '@/types';
 
