@@ -63,7 +63,7 @@ Distributed under the MIT License. See [License](LICENSE.md). `LICENSE` for more
 
 ## Contact
 
-OlivierJM - [@mailto:](manolivier93@gmail.com)
+OlivierJM - manolivier93@gmail.com
 
 ## Acknowledgments
 
