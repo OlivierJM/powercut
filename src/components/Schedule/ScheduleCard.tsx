@@ -32,7 +32,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
       </Text>
 
       <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light" size="lg">
-        {isCurrentlyShedding ? 'Load Shedding Currently In Progress' : timeToGo.text}
+        {isCurrentlyShedding ? 'Load Shedding In Progress' : timeToGo.text}
       </Badge>
     </Card>
   );

@@ -19,7 +19,6 @@ export const createTimeFromDate = (timeString: string, currentDate: string) => {
   return date;
 };
 
-// TODO: Move this into its own file
 export const remainingTime = (scheduleStartDate: Date, currentDate: Date) => {
   const remainingDays = differenceInDays(scheduleStartDate, currentDate);
   const remainingHours = differenceInHours(scheduleStartDate, currentDate) % 24;
@@ -27,19 +26,19 @@ export const remainingTime = (scheduleStartDate: Date, currentDate: Date) => {
 
   if (remainingDays < 0 || remainingHours < 0 || remainingMinutes < 0) {
     return {
-      text: 'No other Load shedding expected today.',
+      text: 'No more outages today',
       color: 'teal',
     };
   }
   if (remainingDays > 0) {
     return {
-      text: `Will start in approximately ${remainingDays} day(s)`,
+      text: `Starts in approximately ${remainingDays} day(s)`,
       color: 'teal',
     };
   }
   if (remainingHours > 0) {
     return {
-      text: `Will start in approximately ${remainingHours} hour(s)`,
+      text: `Starts in approximately ${remainingHours} hour(s)`,
       color: remainingHours < 3 ? 'orange' : 'teal',
     };
   }

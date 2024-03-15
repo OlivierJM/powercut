@@ -26,15 +26,15 @@ describe('Utility Functions', () => {
     it.each([
       {
         futureDate: new Date('2023-03-16T12:00:00Z'),
-        expected: { text: 'Will start in approximately 1 day(s)', color: 'teal' },
+        expected: { text: 'Starts in approximately 1 day(s)', color: 'teal' },
       },
       {
         futureDate: new Date('2023-03-15T15:00:00Z'),
-        expected: { text: 'Will start in approximately 3 hour(s)', color: 'teal' },
+        expected: { text: 'Starts in approximately 3 hour(s)', color: 'teal' },
       },
       {
         futureDate: new Date('2023-03-14T12:00:00Z'),
-        expected: { text: 'No other Load shedding expected today.', color: 'teal' },
+        expected: { text: 'No more outages today', color: 'teal' },
       },
     ])('calculates remaining time for $futureDate', ({ futureDate, expected }) => {
       expect(remainingTime(futureDate, baseDate)).toEqual(expected);
