@@ -13,4 +13,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Thank you for contributing to powercut project, we will get back to you on this issue as soon as possible."
-        pr-message: "Thank you for opening your first PR for powercut project, we will review it as soon as possible. Your contribution is highly valued."
+        pr-message: "Thank you for opening your first PR for powercut project, We greatly value your contribution, Please make sure you read our code of conduct."

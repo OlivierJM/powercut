@@ -5,9 +5,9 @@ import { AppWrapper } from '../AppWrapper';
 describe('AppWrapper', () => {
   it('renders without crashing', () => {
     render(
-        <BrowserRouter>
-          <AppWrapper>Some some</AppWrapper>
-        </BrowserRouter>
+      <BrowserRouter>
+        <AppWrapper>Some some</AppWrapper>
+      </BrowserRouter>
     );
     expect(screen.getAllByText('Home')[0]).toBeInTheDocument();
     expect(screen.getAllByText('FAQ')[0]).toBeInTheDocument();

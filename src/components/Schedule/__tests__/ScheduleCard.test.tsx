@@ -33,9 +33,7 @@ describe('ScheduleCard', () => {
     } as any);
   });
   it('displays load shedding status during load shedding', () => {
-    render(
-          <ScheduleCard data={mockData.data} province={mockData.province} />
-    );
+    render(<ScheduleCard data={mockData.data} province={mockData.province} />);
 
     expect(screen.getByTestId('area-province')).toHaveTextContent('Mitek - Northern');
     expect(screen.getByText('Load Shedding Currently In Progress')).toBeInTheDocument();
@@ -95,9 +93,7 @@ describe('ScheduleCard - Load shedding already happened', () => {
       },
       province: 'Lusaka Province',
     };
-    render(
-          <ScheduleCard data={mock.data} province={mock.province} />
-    );
+    render(<ScheduleCard data={mock.data} province={mock.province} />);
 
     expect(screen.getByTestId('area-province')).toHaveTextContent('Chawama - Lusaka');
     expect(screen.getByText('No Load Shedding expected today')).toBeInTheDocument();

@@ -20,7 +20,12 @@ export function FAQ() {
 
               <Accordion chevronPosition="right" defaultValue="my-location" variant="separated">
                 {questions.map((question, index) => (
-                  <Accordion.Item key={index} className={classes.item} data-testid="question-item" value={question.value}>
+                  <Accordion.Item
+                    key={index}
+                    className={classes.item}
+                    data-testid="question-item"
+                    value={question.value}
+                  >
                     <Accordion.Control>{question.question}</Accordion.Control>
                     <Accordion.Panel>{question.answer}</Accordion.Panel>
                   </Accordion.Item>

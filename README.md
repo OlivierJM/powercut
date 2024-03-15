@@ -3,7 +3,6 @@
 
 Recently in Zambia, we've experienced load shedding, currently at stage 1, resulting in 8 hours per day without electricity across various areas. It can be challenging to anticipate these power outages, making it difficult to plan ahead for activities such as ironing your clothes. This project is designed to provide clear visibility into the load shedding schedule, helping you understand and plan for these outages more easily.
 
-
 ## Demo
 
 [powercut.app](powercut.app)
@@ -27,6 +26,7 @@ Steps to install your project.
 git clone https://github.com/olivierjm/powercut.git
 cd powercut
 yarn
+yarn run dev
 ```
 
 
@@ -51,7 +51,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-Note: Make sure all tests are passing and if you add new change add accompanying tests.
+Note: Make sure all tests are passing and if you add new change add accompanying tests. (`yarn test`)
 
 ## Code of Conduct
 
@@ -59,7 +59,7 @@ Please adhere to this project's [code of conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-Distributed under the MIT License. See [License](LICENSE.md). `LICENSE` for more information.
+Distributed under the MIT License. See [License](LICENSE.md) for more information.
 
 ## Contact
 
