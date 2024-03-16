@@ -7,6 +7,11 @@ Recently in Zambia, we've experienced load shedding, currently at stage 1, resul
 
 [powercut.app](powercut.app)
 
+## How does it work
+
+The tricky part of getting this to work was cleaning the data from zesco and making sure it is in a good shape to work with. 
+So we get data from the pdf extract areas and schedules, clean it with different tools and make sure it is proper JSON. For better user experience we make it easy for users to find areas that are supported by offering them autocompletion, After we get the user's area we find the group they are in within a specific province and then we find the schedule for that Group and then we show all upcoming schedule for that Group.  
+
 ## Table of Contents
 
 - [Installation](#installation)
