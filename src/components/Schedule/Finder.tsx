@@ -93,7 +93,7 @@ const Finder = () => {
         mb="md"
       />
       <Center mb="md">
-        <Button disabled={!area} onClick={findSchedule}>
+        <Button disabled={!area} data-umami-event={`${area.toLowerCase()}`} onClick={findSchedule}>
           Find Schedule
         </Button>
       </Center>
