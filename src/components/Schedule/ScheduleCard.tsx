@@ -1,4 +1,4 @@
-import { Card, Text, Badge, Group, useMantineTheme } from '@mantine/core';
+import { Card, Text, Badge, Group, useMantineTheme, Stack } from '@mantine/core';
 import { isWithinInterval } from 'date-fns';
 import { createTimeFromDate, remainingTime, removeProvince, toTitleCase } from '@/utils';
 import { ScheduleCardProps } from '@/types';
@@ -17,7 +17,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   const timeToGo = remainingTime(scheduleStartDate, currentDate);
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
-      <Group style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
+      <Group style={{ marginBottom: 10, marginTop: theme.spacing.sm }}>
         <Text data-testid="area-province">
           {`${toTitleCase(data?.area)} - ${removeProvince(province)}`}
         </Text>
@@ -25,21 +25,27 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
           color={isCurrentlyShedding ? 'red' : timeToGo.color}
           variant="light"
           data-testid="schedule-date"
+          size="lg"
         >
           {data?.date}
         </Badge>
       </Group>
-
-      <Text size="sm" style={{ marginBottom: 5 }} data-testid="start-time">
-        Start Time: {data?.startTime}
-      </Text>
-      <Text size="sm" style={{ marginBottom: 5 }}>
-        End Time: {data?.endTime}
-      </Text>
-
-      <Badge color={isCurrentlyShedding ? 'red' : timeToGo.color} variant="light" size="lg">
-        {isCurrentlyShedding ? 'Load Shedding In Progress' : timeToGo.text}
-      </Badge>
+      <Stack gap="xs">
+        <Text size="sm" style={{ marginBottom: 1 }} data-testid="start-time">
+          Start Time: {data?.startTime}
+        </Text>
+        <Text size="sm" style={{ marginBottom: 1 }}>
+          End Time: {data?.endTime}
+        </Text>
+        <Badge
+          color={isCurrentlyShedding ? 'red' : timeToGo.color}
+          variant="light"
+          size="lg"
+          fullWidth
+        >
+          {isCurrentlyShedding ? 'Load Shedding In Progress' : timeToGo.text}
+        </Badge>
+      </Stack>
     </Card>
   );
 };
