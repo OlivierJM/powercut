@@ -67,7 +67,6 @@ const Finder = () => {
     <Container my={40} p={2}>
       <Autocomplete
         placeholder="Search for an area..."
-        data-umami-event="search-area"
         data={allAreas}
         value={area}
         onChange={(value) => {
@@ -94,7 +93,7 @@ const Finder = () => {
         mb="md"
       />
       <Center mb="md">
-        <Button disabled={!area} data-umami-event={`find-schedule-${area}`} onClick={findSchedule}>
+        <Button disabled={!area} data-umami-event={`${area.toLowerCase()}`} onClick={findSchedule}>
           Find Schedule
         </Button>
       </Center>
