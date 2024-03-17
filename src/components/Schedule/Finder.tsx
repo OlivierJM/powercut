@@ -64,7 +64,7 @@ const Finder = () => {
   }, [area]);
 
   return (
-    <Container my={40} p={30}>
+    <Container my={40} p={2}>
       <Autocomplete
         placeholder="Search for an area..."
         data={allAreas}
