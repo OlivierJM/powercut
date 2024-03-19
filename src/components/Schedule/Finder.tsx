@@ -1,11 +1,15 @@
 import { useState, useMemo, useCallback } from 'react';
-import { Autocomplete, Button, ActionIcon, Container, Text, Center } from '@mantine/core';
+import { Autocomplete, Button, ActionIcon, Container, Text, Center, Grid, Flex } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { IconX } from '@tabler/icons-react';
 import areas from '@/data/areas.json';
 import schedules from '@/data/schedule.json';
 import ScheduleCard from './ScheduleCard';
 import { ScheduleCardProps } from '@/types';
+import RecentSearch from '../RecentSearch/RecentSearch';
+import RecentSearchTab from '../RecentSearch/RecentSearch';
+
+const recentlySearched = ["Chennai", "Ammoor", "Royapettah"];
 
 const Finder = () => {
   const [area, setArea] = useState('');
@@ -92,6 +96,20 @@ const Finder = () => {
         size="md"
         mb="md"
       />
+      <Flex
+        mih={50}
+        gap="xs"
+        justify="flex-start"
+        align="flex-start"
+        direction="row"
+        wrap="wrap"
+      >
+        {
+          recentlySearched.map((place) =>
+            <RecentSearchTab place={place} />
+          )
+        }
+      </Flex>
       <Center mb="md">
         <Button disabled={!area} data-umami-event={`${area.toLowerCase()}`} onClick={findSchedule}>
           Find Schedule
@@ -101,8 +119,8 @@ const Finder = () => {
 
       {upcomingSchedules.length && area
         ? upcomingSchedules.map((schedule, index) => (
-            <ScheduleCard key={index} data={schedule} province={currentProvince} />
-          ))
+          <ScheduleCard key={index} data={schedule} province={currentProvince} />
+        ))
         : null}
 
       <Text size="sm" mt={10} ta="center" c="dimmed">
