@@ -2,6 +2,9 @@ import {
   differenceInDays,
   differenceInHours,
   differenceInMinutes,
+  isToday,
+  isTomorrow,
+  isYesterday,
   setHours,
   setMinutes,
 } from 'date-fns';
@@ -52,3 +55,10 @@ export const removeProvince = (text: string) => text.replace(/\sProvince$/, '');
 
 export const toTitleCase = (text: string) =>
   text.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+
+export const formatDay = (date: Date): string => {
+  if (isToday(date)) return 'Today';
+  if (isTomorrow(date)) return 'Tomorrow';
+  if (isYesterday(date)) return 'Yesterday';
+  return date.toDateString();
+};
