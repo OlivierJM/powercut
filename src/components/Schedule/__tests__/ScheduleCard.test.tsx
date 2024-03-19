@@ -15,7 +15,7 @@ const mockData = {
 
 vi.mock('@/utils', () => ({
   createTimeFromDate: vi.fn(),
-  formatDay: vi.fn(),
+  formatDay: vi.fn().mockImplementation((date: string) => format(date, 'MMMM do, yyyy')),
   remainingTime: vi.fn(),
   removeProvince: vi
     .fn()
