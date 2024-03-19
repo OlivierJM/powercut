@@ -2,6 +2,7 @@ import {
   differenceInDays,
   differenceInHours,
   differenceInMinutes,
+  format,
   isToday,
   isTomorrow,
   isYesterday,
@@ -60,5 +61,5 @@ export const formatDay = (date: Date): string => {
   if (isToday(date)) return 'Today';
   if (isTomorrow(date)) return 'Tomorrow';
   if (isYesterday(date)) return 'Yesterday';
-  return date.toDateString();
+  return format(date, 'MMMM Do, YYYY')
 };
