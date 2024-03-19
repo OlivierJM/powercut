@@ -923,7 +923,6 @@
     "Group B": [
       "KANSESHI",
       "KANSHESHI INFILL",
-      "",
       "HILLCREST",
       "ZAMTEL COLLEGE",
       "NORTHRISE AROUND MBERESHI FLATS",
@@ -1033,8 +1032,7 @@
       "AVIC INTERNATIONAL",
       "FISENGE AREA",
       "ZWANGENDABA AND JACOPE UP TO WELCOME TO LUANSHYA"
-    ]
-    ,
+    ],
     "Group B": [
       "OAN TOWNSHIP FEEDER- SECTION (1,2,3,4,& 6)",
       "MPATAMATU # 1 i.e. SECTION (21,22,23 & 24)",
@@ -1042,8 +1040,7 @@
       "B-Ave FDR i.e. MINE AREA (ZAONE, PART OF CHESWA, INDP, YALLOW & BUNTUNGWA, FUNYAMA,RIVERSIDE,DATURA & E5)",
       "PART OF KAMIRENDA",
       "MIKOMFWA # 1 FDR i.e. PART OF MIKOMFWA (BUSEKO, POLICE CAMP, MAIN MARKET AND OTHER SURROUNDING AREAS)"
-    ]
-    ,
+    ],
     "Group C": [
       "OWN CENTRE (PNP, ROAN MALL, SUB 46, SUB.12, SUB.54, SUB.18)",
       "CHATEPA (SUB 17 & SUB.36)",
@@ -1056,12 +1053,19 @@
       "KAFULAFUTA",
       "PART OF MIKOMFWA (MUTUBILA/MWASHANI)"
     ]
-
   },
   "Eastern Province": {
-    "Group A": ["MOPANI COPPER MINES"],
-    "Group B": ["MOPANI COPPER MINES", "KONKOLA COPPER MINES"],
-    "Group C": ["MOPANI COPPER MINES", "KONKOLA COPPER MINES"]
+    "Group A": [
+      "MOPANI COPPER MINES"
+    ],
+    "Group B": [
+      "MOPANI COPPER MINES",
+      "KONKOLA COPPER MINES"
+    ],
+    "Group C": [
+      "MOPANI COPPER MINES",
+      "KONKOLA COPPER MINES"
+    ]
   },
   "Western Province": {
     "Group A": [
