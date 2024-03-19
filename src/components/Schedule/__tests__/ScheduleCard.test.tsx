@@ -17,10 +17,14 @@ vi.mock('@/utils', () => ({
   createTimeFromDate: vi.fn(),
   formatDay: vi.fn(),
   remainingTime: vi.fn(),
-  removeProvince: vi.fn().mockImplementation((province: string) => province.replace('Province', '')),
+  removeProvince: vi
+    .fn()
+    .mockImplementation((province: string) => province.replace('Province', '')),
   toTitleCase: vi
     .fn()
-    .mockImplementation((text: string) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()),
+    .mockImplementation(
+      (text: string) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+    ),
 }));
 
 describe('ScheduleCard', () => {

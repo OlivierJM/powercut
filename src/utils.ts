@@ -61,5 +61,5 @@ export const formatDay = (date: Date): string => {
   if (isToday(date)) return 'Today';
   if (isTomorrow(date)) return 'Tomorrow';
   if (isYesterday(date)) return 'Yesterday';
-  return format(date, 'MMMM do, yyyy')
+  return format(date, 'MMMM do, yyyy');
 };
