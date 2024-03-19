@@ -1,11 +1,11 @@
-import areas from '@/data/areas.json';
-import schedules from '@/data/schedule.json';
-import { ScheduleCardProps } from '@/types';
+import { useCallback, useMemo, useState } from 'react';
 import { ActionIcon, Autocomplete, Button, Center, Container, Text } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
 import { isBefore, startOfToday } from 'date-fns';
-import { useCallback, useMemo, useState } from 'react';
 import ScheduleCard from './ScheduleCard';
+import { ScheduleCardProps } from '@/types';
+import areas from '@/data/areas.json';
+import schedules from '@/data/schedule.json';
 
 const Finder = () => {
   const [area, setArea] = useState('');

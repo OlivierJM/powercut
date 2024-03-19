@@ -1,7 +1,7 @@
-import { ScheduleCardProps } from '@/types';
-import { formatDay, remainingTime, removeProvince, toTitleCase } from '@/utils';
 import { Badge, Card, Group, Stack, Text, useMantineTheme } from '@mantine/core';
 import { format, isWithinInterval } from 'date-fns';
+import { ScheduleCardProps } from '@/types';
+import { formatDay, remainingTime, removeProvince, toTitleCase } from '@/utils';
 
 const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   const theme = useMantineTheme();

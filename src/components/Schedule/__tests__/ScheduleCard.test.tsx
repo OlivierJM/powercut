@@ -1,7 +1,7 @@
-import * as utils from '@/utils';
 import { render, screen } from '@test-utils';
 import { format } from 'date-fns';
 import ScheduleCard from '../ScheduleCard';
+import * as utils from '@/utils';
 
 const mockData = {
   data: {
