@@ -3,8 +3,6 @@ export interface ScheduleCardProps {
     group: string;
     startDate: string;
     endDate: string;
-    startTime: string;
-    endTime: string;
     area: string;
   };
   province: string;
