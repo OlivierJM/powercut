@@ -15,18 +15,18 @@ const mockData = {
 
 vi.mock('@/utils', () => ({
   createTimeFromDate: vi.fn(),
-  fomratDay: vi.fn(),
+  formatDay: vi.fn(),
   remainingTime: vi.fn(),
-  removeProvince: vi.fn().mockImplementation((province) => province.replace('Province', '')),
+  removeProvince: vi.fn().mockImplementation((province: string) => province.replace('Province', '')),
   toTitleCase: vi
     .fn()
-    .mockImplementation((text) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()),
+    .mockImplementation((text: string) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()),
 }));
 
 describe('ScheduleCard', () => {
   beforeEach(() => {
     vi.mocked(utils.createTimeFromDate).mockImplementation(
-      (time, date) => new Date(`${date}T${time}`) as any
+      (time: string, date: string) => new Date(`${date}T${time}`) as any
     );
     vi.mocked(utils.remainingTime).mockReturnValue({
       text: 'Load Shedding Currently In Progress',
@@ -82,7 +82,7 @@ describe('ScheduleCard', () => {
 describe('ScheduleCard - Load shedding already happened', () => {
   beforeEach(() => {
     vi.mocked(utils.createTimeFromDate).mockImplementation(
-      (time, date) => new Date(`${date}T${time}`) as any
+      (time: string, date: string) => new Date(`${date}T${time}`) as any
     );
     vi.mocked(utils.remainingTime).mockReturnValue({
       text: 'No Load Shedding expected today',
