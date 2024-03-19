@@ -34,6 +34,17 @@ yarn
 yarn run dev
 ```
 
+## Schedule Updates
+
+When ZESCO updates the loadshedding schedules you'll be required to run the following `schedule-parse` script to in order update the `./src/data/schedule.json` file.
+
+You can use the `./schedule-example.json` to test how this script works.
+
+```bash
+    yarn schedule-parse [filePath]
+
+    ✨ Schedule successfully updated. Happy coding! ✨
+```
 
 ## Features
 
