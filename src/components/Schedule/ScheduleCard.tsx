@@ -1,7 +1,26 @@
-import { Badge, Card, Group, Stack, Text, useMantineTheme } from '@mantine/core';
+import { useEffect, useState } from 'react';
+import {
+  Badge,
+  Button,
+  Card,
+  Group,
+  Paper,
+  Progress,
+  Stack,
+  Text,
+  Transition,
+  useMantineTheme,
+} from '@mantine/core';
 import { format, isWithinInterval } from 'date-fns';
 import { ScheduleCardProps } from '@/types';
-import { formatDay, remainingTime, removeProvince, toTitleCase } from '@/utils';
+import {
+  formatDay,
+  remainingTime,
+  remainingTimePercent,
+  removeProvince,
+  toTitleCase,
+} from '@/utils';
+import ScheduleCardProgess from './ScheduleCardProgress';
 
 const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   const theme = useMantineTheme();
@@ -15,6 +34,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   });
 
   const timeToGo = remainingTime(scheduleStartDate, currentDate);
+  const progressValue = remainingTimePercent(scheduleStartDate, scheduleEndDate);
 
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
@@ -47,6 +67,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
           {isCurrentlyShedding ? 'Load Shedding In Progress' : timeToGo.text}
         </Badge>
       </Stack>
+      {isCurrentlyShedding && <ScheduleCardProgess value={progressValue} />}
     </Card>
   );
 };
