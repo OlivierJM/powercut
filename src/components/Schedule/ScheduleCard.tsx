@@ -1,25 +1,7 @@
-import { useEffect, useState } from 'react';
-import {
-  Badge,
-  Button,
-  Card,
-  Group,
-  Paper,
-  Progress,
-  Stack,
-  Text,
-  Transition,
-  useMantineTheme,
-} from '@mantine/core';
+import { Badge, Card, Group, Stack, Text, useMantineTheme } from '@mantine/core';
 import { format, isWithinInterval } from 'date-fns';
 import { ScheduleCardProps } from '@/types';
-import {
-  formatDay,
-  remainingTime,
-  remainingTimePercent,
-  removeProvince,
-  toTitleCase,
-} from '@/utils';
+import { formatDay, remainingTime, timeElapsedPercent, removeProvince, toTitleCase } from '@/utils';
 import ScheduleCardProgess from './ScheduleCardProgress';
 
 const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
@@ -34,7 +16,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   });
 
   const timeToGo = remainingTime(scheduleStartDate, currentDate);
-  const progressValue = remainingTimePercent(scheduleStartDate, scheduleEndDate);
+  const progressValue = timeElapsedPercent(scheduleStartDate, scheduleEndDate);
 
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>

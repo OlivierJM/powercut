@@ -64,7 +64,7 @@ export const formatDay = (date: Date): string => {
   return format(date, 'MMMM do, yyyy');
 };
 
-export const remainingTimePercent = (startDate: Date, endDate: Date) => {
+export const timeElapsedPercent = (startDate: Date, endDate: Date) => {
   const totalTimeDiff = differenceInMinutes(endDate, startDate);
   const timeDiffToEnd = differenceInMinutes(endDate, new Date());
   const timeDiffPercent = Number(((totalTimeDiff - timeDiffToEnd) / totalTimeDiff) * 100);
