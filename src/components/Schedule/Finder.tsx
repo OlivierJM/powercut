@@ -7,14 +7,15 @@ import { ScheduleCardProps } from '@/types';
 import areas from '@/data/areas.json';
 import schedules from '@/data/schedule.json';
 import RecentSearchTab from '../RecentSearch/RecentSearch';
-import Cookies from 'js-cookie';
 import { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO } from '../../constants'
+import useCookie from '../hooks/useCookie';
 
 const Finder = () => {
   const [area, setArea] = useState('');
   const [currentProvince, setCurrentProvince] = useState('');
   const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleCardProps['data'][]>([]);
-  const [recentSearches, setRecentSearches] = useState(Cookies.get(COOKIE_SEARCH_KEY) ? Cookies.get(COOKIE_SEARCH_KEY) : "");
+  const [cookie, setCookie] = useCookie(COOKIE_SEARCH_KEY);
+  const [recentSearches, setRecentSearches] = useState(cookie);
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
@@ -88,7 +89,7 @@ const Finder = () => {
     }
     const updatedAreas = recentAreas?.join("|") || "";
     setRecentSearches(updatedAreas);
-    Cookies.set(COOKIE_SEARCH_KEY, updatedAreas, { expires: COOKIE_EXPIRY_DAYS });
+    setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
 
   }
 
@@ -104,7 +105,7 @@ const Finder = () => {
       const areas = searchedAreas?.join("|");
       const updatedAreas = areas ? `${areas}|${newArea}` : newArea;
       setRecentSearches(updatedAreas);
-      Cookies.set(COOKIE_SEARCH_KEY, updatedAreas, { expires: COOKIE_EXPIRY_DAYS });
+      setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
     }
 
   }
