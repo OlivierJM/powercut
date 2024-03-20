@@ -17,6 +17,7 @@ vi.mock('@/utils', () => ({
   createTimeFromDate: vi.fn(),
   formatDay: vi.fn().mockImplementation((date: string) => format(date, 'MMMM do, yyyy')),
   remainingTime: vi.fn(),
+  remainingTimePercent: vi.fn().mockImplementation((): number => 50),
   removeProvince: vi
     .fn()
     .mockImplementation((province: string) => province.replace('Province', '')),

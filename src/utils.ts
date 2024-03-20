@@ -63,3 +63,10 @@ export const formatDay = (date: Date): string => {
   if (isYesterday(date)) return 'Yesterday';
   return format(date, 'MMMM do, yyyy');
 };
+
+export const remainingTimePercent = (startDate: Date, endDate: Date) => {
+  const totalTimeDiff = differenceInMinutes(endDate, startDate);
+  const timeDiffToEnd = differenceInMinutes(endDate, new Date());
+  const timeDiffPercent = Number(((totalTimeDiff - timeDiffToEnd) / totalTimeDiff) * 100);
+  return timeDiffPercent;
+};
