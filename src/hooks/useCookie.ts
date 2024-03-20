@@ -1,18 +1,18 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 function getCookieObject(key: string): string {
     const cookies = document.cookie;
-    const cookieArray = cookies.split("; ")
-    for (let cookieIndex in cookieArray) {
-        const cookie = cookieArray[cookieIndex];
+    const cookieArray = cookies.split('; ');
+    for (let i = 0; i < cookieArray.length; i += 1) {
+        const cookie = cookieArray[i];
         if (cookie !== '') {
-            const cookiePair = cookie.split("=");
+            const cookiePair = cookie.split('=');
             if (cookiePair[0] === key) {
                 return cookiePair[1];
             }
         }
     }
-    return "";
+    return '';
 }
 
 export default function useCookies(key: string) {

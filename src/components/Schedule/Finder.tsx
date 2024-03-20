@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import { Autocomplete, Button, ActionIcon, Container, Text, Center, Grid, Flex } from '@mantine/core';
+import { Autocomplete, Button, ActionIcon, Container, Text, Center, Flex } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { IconX } from '@tabler/icons-react';
 import ScheduleCard from './ScheduleCard';
@@ -7,7 +7,7 @@ import { ScheduleCardProps } from '@/types';
 import areas from '@/data/areas.json';
 import schedules from '@/data/schedule.json';
 import RecentSearchTab from '../RecentSearch/RecentSearch';
-import { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO } from '../../constants'
+import { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO } from '../../constants';
 import useCookie from '../../hooks/useCookie';
 
 const Finder = () => {
@@ -27,6 +27,7 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   const findSchedule = useCallback((area: string) => {
     let foundGroup = '';
 
@@ -76,39 +77,35 @@ const Finder = () => {
       setArea(place);
       setUpcomingSchedules([]);
       findSchedule(place);
-
     }
-  }
+  };
 
   const onTabBtnDelete = (place: string) => {
-    const recentAreas = recentSearches?.split("|");
-    const indexToRemove = recentAreas?.indexOf(place)
+    const recentAreas = recentSearches?.split('|');
+    const indexToRemove = recentAreas?.indexOf(place);
 
     if (indexToRemove !== undefined && indexToRemove > -1) {
       recentAreas?.splice(indexToRemove, 1);
     }
-    const updatedAreas = recentAreas?.join("|") || "";
+    const updatedAreas = recentAreas?.join('|') || '';
     setRecentSearches(updatedAreas);
     setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
-
-  }
+  };
 
   const setRecentSearchesLogic = () => {
-    let searchedAreas = recentSearches?.split("|") || [];
+    let searchedAreas = recentSearches?.split('|') || [];
     const isSearchedAlready = searchedAreas?.includes(area);
     const newArea = isSearchedAlready ? '' : area;
     if (newArea) {
-      if (searchedAreas?.length == MAX_RECENT_AREAS_NO) {
+      if (searchedAreas?.length === MAX_RECENT_AREAS_NO) {
         searchedAreas = searchedAreas.slice(1, searchedAreas.length);
-
       }
-      const areas = searchedAreas?.join("|");
-      const updatedAreas = areas ? `${areas}|${newArea}` : newArea;
+      const joinedArea = searchedAreas?.join('|');
+      const updatedAreas = joinedArea ? `${areas}|${newArea}` : newArea;
       setRecentSearches(updatedAreas);
       setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
     }
-
-  }
+  };
 
   return (
     <Container my={40} p={2}>
@@ -147,12 +144,17 @@ const Finder = () => {
         direction="row"
         wrap="wrap"
         style={{
-          marginBottom: '10px'
+          marginBottom: '10px',
         }}
       >
         {
-          recentSearches && recentSearches.split("|").map((place) =>
-            <RecentSearchTab key={place} onTabSelect={onOptionSelect} onTabDelete={onTabBtnDelete} place={place} />
+          recentSearches && recentSearches.split('|').map((place) =>
+            <RecentSearchTab
+              key={place}
+              onTabSelect={onOptionSelect}
+              onTabDelete={onTabBtnDelete}
+              place={place}
+            />
           )
         }
       </Flex>
@@ -163,7 +165,8 @@ const Finder = () => {
           onClick={() => {
             setRecentSearchesLogic();
             findSchedule(area);
-          }}>
+          }}
+        >
           Find Schedule
         </Button>
       </Center>

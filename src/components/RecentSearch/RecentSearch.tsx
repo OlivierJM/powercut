@@ -1,26 +1,24 @@
 import { Button } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
 
-const RecentSearchTab = ({ onTabSelect, onTabDelete, place }: { onTabSelect: Function, onTabDelete: Function, place: string }) => {
-    return (
+const RecentSearchTab = ({ onTabSelect, onTabDelete, place }:
+    { onTabSelect: Function, onTabDelete: Function, place: string }) => (
         <Button
-            rightSection={
+          rightSection={
                 <IconX
-                    size={14}
-                    onClick={(e) => {
+                  size={14}
+                  onClick={(e) => {
                         e.stopPropagation();
                         onTabDelete(place);
-
                     }}
                 />
             }
-            onClick={() => {
+          onClick={() => {
                 onTabSelect(place);
             }}
         >
             {place}
         </Button>
-    )
-}
+    );
 
 export default RecentSearchTab;
