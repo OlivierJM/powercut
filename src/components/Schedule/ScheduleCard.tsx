@@ -1,13 +1,13 @@
-import { Card, Text, Badge, Group, useMantineTheme, Stack } from '@mantine/core';
-import { isWithinInterval } from 'date-fns';
-import { createTimeFromDate, remainingTime, removeProvince, toTitleCase } from '@/utils';
+import { Badge, Card, Group, Stack, Text, useMantineTheme } from '@mantine/core';
+import { format, isWithinInterval } from 'date-fns';
 import { ScheduleCardProps } from '@/types';
+import { formatDay, remainingTime, removeProvince, toTitleCase } from '@/utils';
 
 const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   const theme = useMantineTheme();
   const currentDate = new Date();
-  const scheduleStartDate = createTimeFromDate(data?.startTime, data?.date);
-  const scheduleEndDate = createTimeFromDate(data?.endTime, data?.date);
+  const scheduleStartDate = new Date(data?.startDate);
+  const scheduleEndDate = new Date(data?.endDate);
 
   const isCurrentlyShedding = isWithinInterval(currentDate, {
     start: scheduleStartDate,
@@ -15,6 +15,7 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
   });
 
   const timeToGo = remainingTime(scheduleStartDate, currentDate);
+
   return (
     <Card shadow="sm" padding="lg" radius="md" mb={10}>
       <Group style={{ marginBottom: 10, marginTop: theme.spacing.sm }}>
@@ -27,15 +28,15 @@ const ScheduleCard = ({ data, province }: ScheduleCardProps) => {
           data-testid="schedule-date"
           size="lg"
         >
-          {data?.date}
+          {formatDay(scheduleStartDate)}
         </Badge>
       </Group>
       <Stack gap="xs">
         <Text size="sm" style={{ marginBottom: 1 }} data-testid="start-time">
-          Start Time: {data?.startTime}
+          Start Time: {format(scheduleStartDate, 'HH:mm')}
         </Text>
         <Text size="sm" style={{ marginBottom: 1 }}>
-          End Time: {data?.endTime}
+          End Time: {format(scheduleEndDate, 'HH:mm')}
         </Text>
         <Badge
           color={isCurrentlyShedding ? 'red' : timeToGo.color}

@@ -1,9 +1,8 @@
 export interface ScheduleCardProps {
   data: {
     group: string;
-    date: string;
-    startTime: string;
-    endTime: string;
+    startDate: string;
+    endDate: string;
     area: string;
   };
   province: string;
