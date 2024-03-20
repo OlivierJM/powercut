@@ -1,16 +1,21 @@
-import { useCallback, useMemo, useState } from 'react';
-import { ActionIcon, Autocomplete, Button, Center, Container, Text } from '@mantine/core';
+import { useState, useMemo, useCallback } from 'react';
+import { Autocomplete, Button, ActionIcon, Container, Text, Center, Grid, Flex } from '@mantine/core';
+import { startOfToday, isBefore } from 'date-fns';
 import { IconX } from '@tabler/icons-react';
-import { isBefore, startOfToday } from 'date-fns';
 import ScheduleCard from './ScheduleCard';
 import { ScheduleCardProps } from '@/types';
 import areas from '@/data/areas.json';
 import schedules from '@/data/schedule.json';
+import RecentSearchTab from '../RecentSearch/RecentSearch';
+import { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO } from '../../constants'
+import useCookie from '../../hooks/useCookie';
 
 const Finder = () => {
   const [area, setArea] = useState('');
   const [currentProvince, setCurrentProvince] = useState('');
   const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleCardProps['data'][]>([]);
+  const [cookie, setCookie] = useCookie(COOKIE_SEARCH_KEY);
+  const [recentSearches, setRecentSearches] = useState(cookie);
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
@@ -22,7 +27,7 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
-  const findSchedule = useCallback(() => {
+  const findSchedule = useCallback((area: string) => {
     let foundGroup = '';
 
     // Find the province and group
@@ -66,6 +71,45 @@ const Finder = () => {
     setCurrentProvince(provArea[0]);
   }, [area]);
 
+  const onOptionSelect = async (place: string) => {
+    if (place !== area) {
+      setArea(place);
+      setUpcomingSchedules([]);
+      findSchedule(place);
+
+    }
+  }
+
+  const onTabBtnDelete = (place: string) => {
+    const recentAreas = recentSearches?.split("|");
+    const indexToRemove = recentAreas?.indexOf(place)
+
+    if (indexToRemove !== undefined && indexToRemove > -1) {
+      recentAreas?.splice(indexToRemove, 1);
+    }
+    const updatedAreas = recentAreas?.join("|") || "";
+    setRecentSearches(updatedAreas);
+    setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
+
+  }
+
+  const setRecentSearchesLogic = () => {
+    let searchedAreas = recentSearches?.split("|") || [];
+    const isSearchedAlready = searchedAreas?.includes(area);
+    const newArea = isSearchedAlready ? '' : area;
+    if (newArea) {
+      if (searchedAreas?.length == MAX_RECENT_AREAS_NO) {
+        searchedAreas = searchedAreas.slice(1, searchedAreas.length);
+
+      }
+      const areas = searchedAreas?.join("|");
+      const updatedAreas = areas ? `${areas}|${newArea}` : newArea;
+      setRecentSearches(updatedAreas);
+      setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
+    }
+
+  }
+
   return (
     <Container my={40} p={2}>
       <Autocomplete
@@ -95,8 +139,31 @@ const Finder = () => {
         size="md"
         mb="md"
       />
+      <Flex
+        mih={50}
+        gap="xs"
+        justify="flex-start"
+        align="center"
+        direction="row"
+        wrap="wrap"
+        style={{
+          marginBottom: '10px'
+        }}
+      >
+        {
+          recentSearches && recentSearches.split("|").map((place) =>
+            <RecentSearchTab key={place} onTabSelect={onOptionSelect} onTabDelete={onTabBtnDelete} place={place} />
+          )
+        }
+      </Flex>
       <Center mb="md">
-        <Button disabled={!area} data-umami-event={`${area.toLowerCase()}`} onClick={findSchedule}>
+        <Button
+          disabled={!area}
+          data-umami-event={`${area.toLowerCase()}`}
+          onClick={() => {
+            setRecentSearchesLogic();
+            findSchedule(area);
+          }}>
           Find Schedule
         </Button>
       </Center>
@@ -104,8 +171,8 @@ const Finder = () => {
 
       {upcomingSchedules.length && area
         ? upcomingSchedules.map((schedule, index) => (
-            <ScheduleCard key={index} data={schedule} province={currentProvince} />
-          ))
+          <ScheduleCard key={index} data={schedule} province={currentProvince} />
+        ))
         : null}
 
       <Text size="sm" mt={10} ta="center" c="dimmed">
