@@ -11,14 +11,12 @@ const RecentSearchTab = ({ onTabSelect, onTabDelete, place }: { onTabSelect: Fun
                     size={14}
                     onClick={(e) => {
                         e.stopPropagation();
-                        console.log("clicked on deletr");
                         onTabDelete(place);
 
                     }}
                 />
             }
-            onClick={(e) => {
-                console.log("clicked on button");
+            onClick={() => {
                 onTabSelect(place);
             }}
         >

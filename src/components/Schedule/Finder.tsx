@@ -15,7 +15,6 @@ const Finder = () => {
   const [currentProvince, setCurrentProvince] = useState('');
   const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleCardProps['data'][]>([]);
   const [recentSearches, setRecentSearches] = useState(Cookies.get(COOKIE_SEARCH_KEY) ? Cookies.get(COOKIE_SEARCH_KEY) : "");
-  console.log(recentSearches);
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
@@ -27,7 +26,7 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
-  const findSchedule = useCallback(() => {
+  const findSchedule = useCallback((area: string) => {
     let foundGroup = '';
 
     // Find the province and group
@@ -71,20 +70,17 @@ const Finder = () => {
     setCurrentProvince(provArea[0]);
   }, [area]);
 
-  const onOptionSelect = (place: string) => {
-    console.log('inside selevt', place);
-
+  const onOptionSelect = async (place: string) => {
     if (place !== area) {
       setArea(place);
       setUpcomingSchedules([]);
-      findSchedule();
+      findSchedule(place);
+
     }
   }
 
   const onTabBtnDelete = (place: string) => {
-    console.log(place);
     const recentAreas = recentSearches?.split("|");
-    console.log(recentAreas);
     const indexToRemove = recentAreas?.indexOf(place)
 
     if (indexToRemove !== undefined && indexToRemove > -1) {
@@ -97,27 +93,16 @@ const Finder = () => {
   }
 
   const setRecentSearchesLogic = () => {
-    console.log("______________________________");
-
     let searchedAreas = recentSearches?.split("|") || [];
     const isSearchedAlready = searchedAreas?.includes(area);
-    console.log(searchedAreas);
-
     const newArea = isSearchedAlready ? '' : area;
     if (newArea) {
       if (searchedAreas?.length == MAX_RECENT_AREAS_NO) {
-        console.log('inside log');
-        searchedAreas = searchedAreas.slice(1, searchedAreas.length)
-        console.log(searchedAreas.slice(0, 1));
-        console.log(searchedAreas);
+        searchedAreas = searchedAreas.slice(1, searchedAreas.length);
 
       }
       const areas = searchedAreas?.join("|");
-      console.log(areas);
-
       const updatedAreas = areas ? `${areas}|${newArea}` : newArea;
-      console.log('updated area', updatedAreas);
-
       setRecentSearches(updatedAreas);
       Cookies.set(COOKIE_SEARCH_KEY, updatedAreas, { expires: COOKIE_EXPIRY_DAYS });
     }
@@ -166,7 +151,7 @@ const Finder = () => {
       >
         {
           recentSearches && recentSearches.split("|").map((place) =>
-            <RecentSearchTab onTabSelect={onOptionSelect} onTabDelete={onTabBtnDelete} place={place} />
+            <RecentSearchTab key={place} onTabSelect={onOptionSelect} onTabDelete={onTabBtnDelete} place={place} />
           )
         }
       </Flex>
@@ -176,7 +161,7 @@ const Finder = () => {
           data-umami-event={`${area.toLowerCase()}`}
           onClick={() => {
             setRecentSearchesLogic();
-            findSchedule();
+            findSchedule(area);
           }}>
           Find Schedule
         </Button>
