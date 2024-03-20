@@ -2,11 +2,10 @@ import { useState, useMemo, useCallback } from 'react';
 import { Autocomplete, Button, ActionIcon, Container, Text, Center, Grid, Flex } from '@mantine/core';
 import { startOfToday, isBefore } from 'date-fns';
 import { IconX } from '@tabler/icons-react';
-import areas from '@/data/areas.json';
-import schedules from '@/data/schedule.json';
 import ScheduleCard from './ScheduleCard';
 import { ScheduleCardProps } from '@/types';
-import RecentSearch from '../RecentSearch/RecentSearch';
+import areas from '@/data/areas.json';
+import schedules from '@/data/schedule.json';
 import RecentSearchTab from '../RecentSearch/RecentSearch';
 import Cookies from 'js-cookie';
 import { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO } from '../../constants'
@@ -56,12 +55,15 @@ const Finder = () => {
     const startOfCurrentDay = startOfToday();
     const filteredSchedules = provinceSchedules
       .filter((sch) => sch.Group === foundGroup.split(' ')[1])
-      .filter((sch) => !isBefore(sch.Date, startOfCurrentDay))
+      .filter(
+        (sch) =>
+          !isBefore(new Date(sch.Start), startOfCurrentDay) ||
+          !isBefore(new Date(sch.End), new Date())
+      )
       .map((sch) => ({
         group: sch.Group,
-        date: sch.Date,
-        startTime: sch['Start Time'],
-        endTime: sch['End Time'],
+        startDate: new Date(sch.Start).toISOString(),
+        endDate: new Date(sch.End).toISOString(),
         area,
       }));
 
