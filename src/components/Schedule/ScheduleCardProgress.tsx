@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { Progress, Transition } from '@mantine/core';
 
 const ScheduleCardProgress = ({ value }: { value: number }) => {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
   const [progressValue, setProgressValue] = useState(0);
   useEffect(() => {
     setTimeout(() => {
-      setMounted(true)
+      setMounted(true);
       setProgressValue(value);
     }, 100);
     return () => {
@@ -16,12 +16,7 @@ const ScheduleCardProgress = ({ value }: { value: number }) => {
   }, []);
 
   return (
-    <Transition
-      mounted={mounted}
-      transition="scale-x"
-      duration={700}
-      timingFunction="ease"
-    >
+    <Transition mounted={mounted} transition="scale-x" duration={700} timingFunction="ease">
       {(transitionStyle) => (
         <Progress
           value={progressValue}
