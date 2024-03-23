@@ -1,27 +1,31 @@
 
 # Powercut
-
-Recently in Zambia, we've experienced load shedding, currently at stage 1, resulting in 8 hours per day without electricity across various areas. It can be challenging to anticipate these power outages, making it difficult to plan ahead for activities such as ironing your clothes. This project is designed to provide clear visibility into the load shedding schedule, helping you understand and plan for these outages more easily.
-
+Easier way to track load shedding schedule in Zambia
 ## Demo
 
-[powercut.app](powercut.app)
+https://powercut.app
 
-## How does it work
-
-The tricky part of getting this to work was cleaning the data from zesco and making sure it is in a good shape to work with. 
-So we get data from the pdf extract areas and schedules, clean it with different tools and make sure it is proper JSON. For better user experience we make it easy for users to find areas that are supported by offering them autocompletion, After we get the user's area we find the group they are in within a specific province and then we find the schedule for that Group and then we show all upcoming schedule for that Group.  
 
 ## Table of Contents
 
+- [Overview]()
+- [How does it work](#how-does-it-work)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+Recently in Zambia, we've experienced load shedding, currently at stage 1, resulting in 8 hours per day without electricity across various areas. It can be challenging to anticipate these power outages, making it difficult to plan ahead for activities such as ironing your clothes. This project is designed to provide clear visibility into the load shedding schedule, helping you understand and plan for these outages more easily.
+
+## How does it work
+
+The tricky part of getting this to work was cleaning the data from zesco and making sure it is in a good shape to work with. 
+So we get data from the pdf extract areas and schedules, clean it with different tools and make sure it is proper JSON. For better user experience we make it easy for users to find areas that are supported by offering them autocompletion, After we get the user's area we find the group they are in within a specific province and then we find the schedule for that Group and then we show all upcoming schedule for that Group.  
 
 ## Installation
 
@@ -41,9 +45,9 @@ When ZESCO updates the loadshedding schedules you'll be required to run the foll
 You can use the `./schedule-example.json` to test how this script works.
 
 ```bash
-    yarn schedule-parse [filePath]
+yarn schedule-parse [filePath]
 
-    ✨ Schedule successfully updated. Happy coding! ✨
+✨ Schedule successfully updated. Happy coding! ✨
 ```
 
 ## Features
