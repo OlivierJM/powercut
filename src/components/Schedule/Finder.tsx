@@ -72,7 +72,7 @@ const Finder = () => {
     setCurrentProvince(provArea[0]);
   }, [area]);
 
-  const onOptionSelect = async (place: string) => {
+  const onOptionSelect = (place: string) => {
     if (place !== area) {
       setArea(place);
       setUpcomingSchedules([]);
@@ -101,7 +101,7 @@ const Finder = () => {
         searchedAreas = searchedAreas.slice(1, searchedAreas.length);
       }
       const joinedArea = searchedAreas?.join('|');
-      const updatedAreas = joinedArea ? `${areas}|${newArea}` : newArea;
+      const updatedAreas = joinedArea ? `${joinedArea}|${newArea}` : newArea;
       setRecentSearches(updatedAreas);
       setCookie(updatedAreas, COOKIE_EXPIRY_DAYS);
     }
@@ -139,7 +139,7 @@ const Finder = () => {
       <Flex
         mih={50}
         gap="xs"
-        justify="flex-start"
+        justify="center"
         align="center"
         direction="row"
         wrap="wrap"

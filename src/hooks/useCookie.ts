@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function getCookieObject(key: string): string {
+function getCookie(key: string): string {
     const cookies = document.cookie;
     const cookieArray = cookies.split('; ');
     for (let i = 0; i < cookieArray.length; i += 1) {
@@ -16,9 +16,9 @@ function getCookieObject(key: string): string {
 }
 
 export default function useCookies(key: string) {
-    const [storedCookie, setStoredCookie] = useState(() => getCookieObject(key));
+    const [storedCookie, setStoredCookie] = useState(() => getCookie(key));
 
-    function setCookie(value: any, daysUntilExpiry?: number): any {
+    function setCookie(value: any, daysUntilExpiry?: number): void {
         if (value !== undefined) {
             setStoredCookie(value);
 
