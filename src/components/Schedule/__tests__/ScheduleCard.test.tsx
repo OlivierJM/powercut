@@ -1,13 +1,13 @@
 import { render, screen } from '@test-utils';
+import { format } from 'date-fns';
 import ScheduleCard from '../ScheduleCard';
 import * as utils from '@/utils';
 
 const mockData = {
   data: {
     group: 'A',
-    date: '2023-03-15',
-    startTime: '12:00',
-    endTime: '14:00',
+    startDate: '2024-03-15T04:00:00.000Z',
+    endDate: '2024-03-15T12:00:00.000Z',
     area: 'Mitek',
   },
   province: 'Northern Province',
@@ -15,17 +15,23 @@ const mockData = {
 
 vi.mock('@/utils', () => ({
   createTimeFromDate: vi.fn(),
+  formatDay: vi.fn().mockImplementation((date: string) => format(date, 'MMMM do, yyyy')),
   remainingTime: vi.fn(),
-  removeProvince: vi.fn().mockImplementation((province) => province.replace('Province', '')),
+  timeElapsedPercent: vi.fn().mockImplementation((): number => 50),
+  removeProvince: vi
+    .fn()
+    .mockImplementation((province: string) => province.replace('Province', '')),
   toTitleCase: vi
     .fn()
-    .mockImplementation((text) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()),
+    .mockImplementation(
+      (text: string) => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+    ),
 }));
 
 describe('ScheduleCard', () => {
   beforeEach(() => {
     vi.mocked(utils.createTimeFromDate).mockImplementation(
-      (time, date) => new Date(`${date}T${time}`) as any
+      (time: string, date: string) => new Date(`${date}T${time}`) as any
     );
     vi.mocked(utils.remainingTime).mockReturnValue({
       text: 'Load Shedding Currently In Progress',
@@ -37,18 +43,23 @@ describe('ScheduleCard', () => {
 
     expect(screen.getByTestId('area-province')).toHaveTextContent('Mitek - Northern');
     expect(screen.getByText('Load Shedding Currently In Progress')).toBeInTheDocument();
-    expect(screen.getByText(mockData.data.date)).toBeInTheDocument();
-    expect(screen.getByText(`Start Time: ${mockData.data.startTime}`)).toBeInTheDocument();
-    expect(screen.getByText(`End Time: ${mockData.data.endTime}`)).toBeInTheDocument();
+    expect(
+      screen.getByText(utils.formatDay(new Date(mockData.data.startDate)))
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(`Start Time: ${format(mockData.data.startDate, 'HH:mm')}`)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(`End Time: ${format(mockData.data.endDate, 'HH:mm')}`)
+    ).toBeInTheDocument();
   });
 
   it('displays correct info for different location and time', () => {
     const pastLoadSheddingMockData = {
       data: {
         group: 'A',
-        date: '2023-03-15',
-        startTime: '12:00',
-        endTime: '14:00',
+        startDate: '2024-03-15T22:00:00.000Z',
+        endDate: '2024-03-16T00:00:00.000Z',
         area: 'Libala',
       },
       province: 'Lusaka Province',
@@ -61,12 +72,14 @@ describe('ScheduleCard', () => {
     );
 
     expect(screen.getByTestId('area-province')).toHaveTextContent('Libala - Lusaka');
-    expect(screen.getByText(pastLoadSheddingMockData.data.date)).toBeInTheDocument();
     expect(
-      screen.getByText(`Start Time: ${pastLoadSheddingMockData.data.startTime}`)
+      screen.getByText(utils.formatDay(new Date(pastLoadSheddingMockData.data.startDate)))
     ).toBeInTheDocument();
     expect(
-      screen.getByText(`End Time: ${pastLoadSheddingMockData.data.endTime}`)
+      screen.getByText(`Start Time: ${format(pastLoadSheddingMockData.data.startDate, 'HH:mm')}`)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(`End Time: ${format(pastLoadSheddingMockData.data.endDate, 'HH:mm')}`)
     ).toBeInTheDocument();
   });
 });
@@ -74,7 +87,7 @@ describe('ScheduleCard', () => {
 describe('ScheduleCard - Load shedding already happened', () => {
   beforeEach(() => {
     vi.mocked(utils.createTimeFromDate).mockImplementation(
-      (time, date) => new Date(`${date}T${time}`) as any
+      (time: string, date: string) => new Date(`${date}T${time}`) as any
     );
     vi.mocked(utils.remainingTime).mockReturnValue({
       text: 'No Load Shedding expected today',
@@ -86,9 +99,8 @@ describe('ScheduleCard - Load shedding already happened', () => {
     const mock = {
       data: {
         group: 'A',
-        date: '2023-03-15',
-        startTime: '00:00',
-        endTime: '6:00',
+        startDate: '2024-03-14T22:00:00.000Z',
+        endDate: '2024-03-15T04:00:00.000Z',
         area: 'Chawama',
       },
       province: 'Lusaka Province',
@@ -97,7 +109,9 @@ describe('ScheduleCard - Load shedding already happened', () => {
 
     expect(screen.getByTestId('area-province')).toHaveTextContent('Chawama - Lusaka');
     expect(screen.getByText('No Load Shedding expected today')).toBeInTheDocument();
-    expect(screen.getByText(`Start Time: ${mock.data.startTime}`)).toBeInTheDocument();
-    expect(screen.getByText(`End Time: ${mock.data.endTime}`)).toBeInTheDocument();
+    expect(
+      screen.getByText(`Start Time: ${format(mock.data.startDate, 'HH:mm')}`)
+    ).toBeInTheDocument();
+    expect(screen.getByText(`End Time: ${format(mock.data.endDate, 'HH:mm')}`)).toBeInTheDocument();
   });
 });

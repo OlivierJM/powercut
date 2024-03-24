@@ -1,4 +1,12 @@
-import { createTimeFromDate, remainingTime, removeProvince, toTitleCase } from '@/utils';
+import { addDays, addHours } from 'date-fns';
+import {
+  createTimeFromDate,
+  remainingTime,
+  removeProvince,
+  toTitleCase,
+  formatDay,
+  timeElapsedPercent,
+} from '@/utils';
 
 describe('Utility Functions', () => {
   describe('createTimeFromDate', () => {
@@ -38,6 +46,45 @@ describe('Utility Functions', () => {
       },
     ])('calculates remaining time for $futureDate', ({ futureDate, expected }) => {
       expect(remainingTime(futureDate, baseDate)).toEqual(expected);
+    });
+  });
+
+  describe('timeElapsedPercent', () => {
+    it('calculates remaining time for at the beginning of the event', () => {
+      const startDate = new Date();
+      const endDate = addDays(startDate, 1);
+      const expected = 0;
+      expect(timeElapsedPercent(startDate, endDate)).toBeCloseTo(expected, 5);
+    });
+    it('calculates remaining time for at the end of the event', () => {
+      const endDate = new Date();
+      const startDate = addDays(endDate, -1);
+      const expected = 100;
+      expect(timeElapsedPercent(startDate, endDate)).toBeCloseTo(expected, 5);
+    });
+    it('calculates remaining time at the middle of the event', () => {
+      const endDate = addHours(new Date(), 12);
+      const startDate = addDays(endDate, -1);
+      const expected = 50;
+      expect(timeElapsedPercent(startDate, endDate)).toBeCloseTo(expected, 5);
+    });
+  });
+  describe('formatDay', () => {
+    it.each([
+      {
+        inputDate: addDays(new Date(), 1),
+        expected: 'Tomorrow',
+      },
+      {
+        inputDate: new Date(),
+        expected: 'Today',
+      },
+      {
+        inputDate: addDays(new Date(), -1),
+        expected: 'Yesterday',
+      },
+    ])('formats the $inputDate relative to the current day', ({ inputDate, expected }) => {
+      expect(formatDay(inputDate)).toEqual(expected);
     });
   });
 

@@ -1,6 +1,6 @@
-import { AppShell, Burger, Group, UnstyledButton, ActionIcon } from '@mantine/core';
+import { ActionIcon, AppShell, Burger, Group, UnstyledButton } from '@mantine/core';
 import { IconBolt } from '@tabler/icons-react';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router-dom';
 import classes from './AppWrapper.module.css';
 
 interface Props {
