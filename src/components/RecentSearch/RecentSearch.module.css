@@ -1,0 +1,10 @@
+.btnText{
+  max-width: 12.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 1;
+}
+
+.btn{
+  max-width: calc(100% / 4);
+}
