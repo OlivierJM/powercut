@@ -1,3 +1,4 @@
+
 export const questions = [
   {
     question: 'Why can I not see my location?',
@@ -30,14 +31,16 @@ export const questions = [
   },
   {
     question: 'How can I contribute?',
-    answer: 'The app will be opensourced very soon, and you can add your own contribution',
+    answer: "The app is opensource, and you can add your own contribution on the following link below.",
     value: 'contribute',
+    link:"https://github.com/OlivierJM/powercut"
   },
   {
     question: 'How can I report a bug?',
     answer:
-      'You can report a bug by sending an email to manolivier93@gmail.com, very soon we will open Github issues for everyone to report bugs.',
+      "You can report a bug by sending an email to manolivier93@gmail.com, or on Github issues.",
     value: 'report-bug',
+    link:"https://github.com/OlivierJM/powercut/issues"
   },
   {
     question: 'Do you collect any data',
