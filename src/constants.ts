@@ -32,7 +32,7 @@ export const questions = [
   },
   {
     question: 'How can I contribute?',
-    answer: `The app is opensource, and you can add your own contribution on the following  ${powercut}`,
+    answer: `The app is opensource, and you can add your own contribution on the following ${powercut}`,
     value: 'contribute',
   },
   {
