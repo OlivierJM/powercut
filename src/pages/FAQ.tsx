@@ -27,8 +27,32 @@ export function FAQ() {
                     value={question.value}
                   >
                     <Accordion.Control>{question.question}</Accordion.Control>
+                    
                     <Accordion.Panel>{question.answer}</Accordion.Panel>
-                  </Accordion.Item>
+                    <Accordion.Panel>
+                    {question.link && question.value==='contribute' && (
+                    <p>
+                      <a href={"https://github.com/OlivierJM/powercut"} target="_blank" rel="noopener noreferrer">
+                        Contribute
+                      </a>
+                    </p>
+                  )}
+                    </Accordion.Panel>
+                  <Accordion.Panel>
+                  { question.value === 'report-bug' && (
+                  <p>
+                    <a href={"https://github.com/OlivierJM/powercut/issues"} target="_blank" rel="noopener noreferrer">
+                      Report a Bug on GitHub
+                    </a>
+                  </p>
+                )}
+                </Accordion.Panel>
+                
+                
+                   
+                 </Accordion.Item>
+                  
+                 
                 ))}
               </Accordion>
             </Grid.Col>
