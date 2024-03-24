@@ -27,50 +27,53 @@ const Finder = () => {
     return [...new Set(allAreasList)].sort();
   }, []);
 
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  const findSchedule = useCallback((area: string) => {
-    let foundGroup = '';
+  const findSchedule = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-shadow
+    (area: string) => {
+      let foundGroup = '';
 
-    // Find the province and group
-    const provArea = Object.entries(areas).find(([, groups]) =>
-      Object.entries(groups).some(([group, ars]) => {
-        if (ars.includes(area)) {
-          foundGroup = group;
-          return true;
-        }
-        return false;
-      })
-    );
+      // Find the province and group
+      const provArea = Object.entries(areas).find(([, groups]) =>
+        Object.entries(groups).some(([group, ars]) => {
+          if (ars.includes(area)) {
+            foundGroup = group;
+            return true;
+          }
+          return false;
+        })
+      );
 
-    if (!provArea) {
-      setUpcomingSchedules([]);
-      return;
-    }
+      if (!provArea) {
+        setUpcomingSchedules([]);
+        return;
+      }
 
-    const provinceSchedules = schedules.find((s) => s.Province === provArea[0])?.Schedules;
-    if (!provinceSchedules) {
-      setUpcomingSchedules([]);
-      return;
-    }
+      const provinceSchedules = schedules.find((s) => s.Province === provArea[0])?.Schedules;
+      if (!provinceSchedules) {
+        setUpcomingSchedules([]);
+        return;
+      }
 
-    const startOfCurrentDay = startOfToday();
-    const filteredSchedules = provinceSchedules
-      .filter((sch) => sch.Group === foundGroup.split(' ')[1])
-      .filter(
-        (sch) =>
-          !isBefore(new Date(sch.Start), startOfCurrentDay) ||
-          !isBefore(new Date(sch.End), new Date())
-      )
-      .map((sch) => ({
-        group: sch.Group,
-        startDate: new Date(sch.Start).toISOString(),
-        endDate: new Date(sch.End).toISOString(),
-        area,
-      }));
+      const startOfCurrentDay = startOfToday();
+      const filteredSchedules = provinceSchedules
+        .filter((sch) => sch.Group === foundGroup.split(' ')[1])
+        .filter(
+          (sch) =>
+            !isBefore(new Date(sch.Start), startOfCurrentDay) ||
+            !isBefore(new Date(sch.End), new Date())
+        )
+        .map((sch) => ({
+          group: sch.Group,
+          startDate: new Date(sch.Start).toISOString(),
+          endDate: new Date(sch.End).toISOString(),
+          area,
+        }));
 
-    setUpcomingSchedules(filteredSchedules);
-    setCurrentProvince(provArea[0]);
-  }, [area]);
+      setUpcomingSchedules(filteredSchedules);
+      setCurrentProvince(provArea[0]);
+    },
+    [area]
+  );
 
   const onOptionSelect = (place: string) => {
     if (place !== area) {
@@ -147,16 +150,17 @@ const Finder = () => {
           marginBottom: '10px',
         }}
       >
-        {
-          recentSearches && recentSearches.split('|').map((place) =>
-            <RecentSearchTab
-              key={place}
-              onTabSelect={onOptionSelect}
-              onTabDelete={onTabBtnDelete}
-              place={place}
-            />
-          )
-        }
+        {recentSearches &&
+          recentSearches
+            .split('|')
+            .map((place) => (
+              <RecentSearchTab
+                key={place}
+                onTabSelect={onOptionSelect}
+                onTabDelete={onTabBtnDelete}
+                place={place}
+              />
+            ))}
       </Flex>
       <Center mb="md">
         <Button
@@ -174,8 +178,8 @@ const Finder = () => {
 
       {upcomingSchedules.length && area
         ? upcomingSchedules.map((schedule, index) => (
-          <ScheduleCard key={index} data={schedule} province={currentProvince} />
-        ))
+            <ScheduleCard key={index} data={schedule} province={currentProvince} />
+          ))
         : null}
 
       <Text size="sm" mt={10} ta="center" c="dimmed">
