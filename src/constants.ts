@@ -32,13 +32,13 @@ export const questions = [
   },
   {
     question: 'How can I contribute?',
-    answer: `The app is opensource, and you can add your own contribution on the following ${powercut}`,
+    answer: `The app is opensource, and you can add your own contribution on the following [link](${powercut})`,
     value: 'contribute',
   },
   {
     question: 'How can I report a bug?',
     answer:
-      `You can report a bug by sending an email to manolivier93@gmail.com, or on Github issues ${issues}`,
+      `You can report a bug by sending an email to manolivier93@gmail.com, or on Github [issues](${issues})`,
     value: 'report-bug',
   },
   {
