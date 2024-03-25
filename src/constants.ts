@@ -30,13 +30,14 @@ export const questions = [
   },
   {
     question: 'How can I contribute?',
-    answer: 'The app will be opensourced very soon, and you can add your own contribution',
+    answer:
+      'The app is opensource and you can add your own contribution by visiting our <a data-testid="contribute-link" href="https://github.com/OlivierJM/powercut?tab=readme-ov-file#contributing" target="_blank" rel="noopener noreferrer">Github</a>',
     value: 'contribute',
   },
   {
     question: 'How can I report a bug?',
     answer:
-      'You can report a bug by sending an email to manolivier93@gmail.com, very soon we will open Github issues for everyone to report bugs.',
+      'You can report a bug by submitting an issue in our <a data-testid="report-bug-link" href="https://github.com/OlivierJM/powercut" target="_blank" rel="noopener noreferrer">Github</a> repository.',
     value: 'report-bug',
   },
   {

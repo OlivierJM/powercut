@@ -1,4 +1,6 @@
 import { Title, Container, Accordion, Grid, Image } from '@mantine/core';
+import dompurify from 'dompurify';
+import parse from 'html-react-parser';
 import classes from '../styles/FAQ.module.css';
 import image from '../assets/faq.svg';
 import { AppWrapper } from '@/components/AppWrapper/AppWrapper';
@@ -19,17 +21,25 @@ export function FAQ() {
               </Title>
 
               <Accordion chevronPosition="right" defaultValue="my-location" variant="separated">
-                {questions.map((question, index) => (
-                  <Accordion.Item
-                    key={index}
-                    className={classes.item}
-                    data-testid="question-item"
-                    value={question.value}
-                  >
-                    <Accordion.Control>{question.question}</Accordion.Control>
-                    <Accordion.Panel>{question.answer}</Accordion.Panel>
-                  </Accordion.Item>
-                ))}
+                {questions.map((question, index) => {
+                  const sanitizedAnswer = dompurify.sanitize(question.answer, {
+                    ADD_ATTR: ['target'],
+                  });
+
+                  return (
+                    <Accordion.Item
+                      key={index}
+                      className={classes.item}
+                      data-testid="question-item"
+                      value={question.value}
+                    >
+                      <Accordion.Control data-testid={`question-${question.value}`}>
+                        {question.question}
+                      </Accordion.Control>
+                      <Accordion.Panel>{parse(sanitizedAnswer)}</Accordion.Panel>
+                    </Accordion.Item>
+                  );
+                })}
               </Accordion>
             </Grid.Col>
           </Grid>

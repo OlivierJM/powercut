@@ -1,11 +1,12 @@
 import { useCallback, useMemo, useState } from 'react';
-import { ActionIcon, Autocomplete, Button, Center, Container, Text } from '@mantine/core';
+import { ActionIcon, Autocomplete, Button, Center, Container, Text, Image } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
 import { isBefore, startOfToday } from 'date-fns';
 import ScheduleCard from './ScheduleCard';
 import { ScheduleCardProps } from '@/types';
 import areas from '@/data/areas.json';
 import schedules from '@/data/schedule.json';
+import githubImage from '../../assets/github-mark.svg';
 
 const Finder = () => {
   const [area, setArea] = useState('');
@@ -120,6 +121,21 @@ const Finder = () => {
       <Text c="dimmed" ta="center" size="lg">
         Made with ♥ by OlivierJM
       </Text>
+      <a
+        href="https://github.com/OlivierJM/powercut"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid="github-link"
+      >
+        <Image
+          src={githubImage}
+          alt="Github Repository"
+          data-testid="github-svg"
+          styles={{
+            root: { height: 24, width: 25, margin: '0 auto' },
+          }}
+        />
+      </a>
     </Container>
   );
 };
