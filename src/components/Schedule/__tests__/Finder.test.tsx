@@ -73,4 +73,9 @@ describe('Finder Component', () => {
   it('shows the creator signature', () => {
     expect(screen.getByText('Made with ♥ by OlivierJM')).toBeInTheDocument();
   });
+
+  it('renders the github link', () => {
+    expect(screen.getByTestId('github-link')).toBeInTheDocument();
+    expect(screen.getByTestId('github-svg')).toBeInTheDocument();
+  });
 });

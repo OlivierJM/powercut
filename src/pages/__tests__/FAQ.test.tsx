@@ -49,4 +49,30 @@ describe('FAQ Component', () => {
     await user.click(screen.getByText(questions[1].question));
     expect(screen.queryByText(questions[0].answer)).not.toBeVisible();
   });
+
+  it('renders html within answers', async () => {
+    const user = userEvent.setup();
+
+    // Click the sixth question to open it and the first one should now be closed
+    await user.click(screen.getByTestId(`question-${questions[5].value}`));
+
+    // needs slight delay to render
+    await new Promise((r) => {
+      setTimeout(r, 50);
+    });
+
+    expect(screen.getByTestId(`${questions[5].value}-link`)).toBeVisible();
+    expect(screen.getByTestId(`${questions[5].value}-link`)).toBeInstanceOf(HTMLAnchorElement);
+
+    // Click the seventh question to open it and the first one should now be closed
+    await user.click(screen.getByTestId(`question-${questions[6].value}`));
+
+    // needs slight delay to render
+    await new Promise((r) => {
+      setTimeout(r, 50);
+    });
+
+    expect(screen.getByTestId(`${questions[6].value}-link`)).toBeVisible();
+    expect(screen.getByTestId(`${questions[6].value}-link`)).toBeInstanceOf(HTMLAnchorElement);
+  });
 });
