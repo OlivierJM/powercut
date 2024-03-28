@@ -13,12 +13,13 @@ const RecentSearchTab = ({
 }) => (
   <Button
     radius="xl"
-    size="compact-md"
+    size="xs"
     className={classes.btn}
     color="gray"
     rightSection={
       <IconX
         size={14}
+        data-testid="delete-icon"
         onClick={(e) => {
           e.stopPropagation();
           onTabDelete(place);
