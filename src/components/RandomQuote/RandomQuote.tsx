@@ -10,7 +10,9 @@ const RandomQuote = () => {
       {loading ? (
         <Skeleton height={20} radius="md" width="80%" data-testid="random-quote-loading" />
       ) : (
-        <Text fs="italic" c="dimmed" ta="center" mt="md">{`${quote?.content} - ${quote?.author}`}</Text>
+        <Text fs="italic" c="dimmed" ta="center" mt="md">
+          {`${quote?.content} - ${quote?.author}`}
+        </Text>
       )}
     </Center>
   );
