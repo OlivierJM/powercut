@@ -1,4 +1,4 @@
-export const questions = [
+const questions = [
   {
     question: 'Why can I not see my location?',
     answer:
@@ -51,3 +51,9 @@ export const questions = [
     value: 'offline',
   },
 ];
+
+const COOKIE_EXPIRY_DAYS = 7;
+const COOKIE_SEARCH_KEY = 'recentSearches';
+const MAX_RECENT_AREAS_NO = 3;
+
+export { COOKIE_EXPIRY_DAYS, COOKIE_SEARCH_KEY, MAX_RECENT_AREAS_NO, questions };

@@ -1,70 +1,23 @@
-import { useCallback, useMemo, useState } from 'react';
-import { ActionIcon, Autocomplete, Button, Center, Container, Text } from '@mantine/core';
+import { Autocomplete, Button, ActionIcon, Container, Text, Center, Flex } from '@mantine/core';
 import { IconX } from '@tabler/icons-react';
-import { isBefore, startOfToday } from 'date-fns';
 import ScheduleCard from './ScheduleCard';
-import { ScheduleCardProps } from '@/types';
-import areas from '@/data/areas.json';
-import schedules from '@/data/schedule.json';
+import RecentSearchTab from '../RecentSearch/RecentSearch';
+import { useFinder } from './useFinder';
 
 const Finder = () => {
-  const [area, setArea] = useState('');
-  const [currentProvince, setCurrentProvince] = useState('');
-  const [upcomingSchedules, setUpcomingSchedules] = useState<ScheduleCardProps['data'][]>([]);
-
-  const allAreas = useMemo(() => {
-    const allAreasList = [] as string[];
-    Object.values(areas).forEach((groups) => {
-      Object.values(groups).forEach((areaList) => {
-        allAreasList.push(...areaList);
-      });
-    });
-    return [...new Set(allAreasList)].sort();
-  }, []);
-
-  const findSchedule = useCallback(() => {
-    let foundGroup = '';
-
-    // Find the province and group
-    const provArea = Object.entries(areas).find(([, groups]) =>
-      Object.entries(groups).some(([group, ars]) => {
-        if (ars.includes(area)) {
-          foundGroup = group;
-          return true;
-        }
-        return false;
-      })
-    );
-
-    if (!provArea) {
-      setUpcomingSchedules([]);
-      return;
-    }
-
-    const provinceSchedules = schedules.find((s) => s.Province === provArea[0])?.Schedules;
-    if (!provinceSchedules) {
-      setUpcomingSchedules([]);
-      return;
-    }
-
-    const startOfCurrentDay = startOfToday();
-    const filteredSchedules = provinceSchedules
-      .filter((sch) => sch.Group === foundGroup.split(' ')[1])
-      .filter(
-        (sch) =>
-          !isBefore(new Date(sch.Start), startOfCurrentDay) ||
-          !isBefore(new Date(sch.End), new Date())
-      )
-      .map((sch) => ({
-        group: sch.Group,
-        startDate: new Date(sch.Start).toISOString(),
-        endDate: new Date(sch.End).toISOString(),
-        area,
-      }));
-
-    setUpcomingSchedules(filteredSchedules);
-    setCurrentProvince(provArea[0]);
-  }, [area]);
+  const {
+    area,
+    setArea,
+    currentProvince,
+    upcomingSchedules,
+    recentSearches,
+    allAreas,
+    findSchedule,
+    onOptionSelect,
+    onTabBtnDelete,
+    handleRecentSearches,
+    setUpcomingSchedules,
+  } = useFinder();
 
   return (
     <Container my={40} p={2}>
@@ -96,8 +49,38 @@ const Finder = () => {
         size="md"
         mb="md"
       />
+      <Flex
+        mih={50}
+        gap="xs"
+        justify="center"
+        align="center"
+        direction="row"
+        wrap="wrap"
+        style={{
+          marginBottom: '10px',
+        }}
+      >
+        {recentSearches &&
+          recentSearches
+            .split('|')
+            .map((place) => (
+              <RecentSearchTab
+                key={place}
+                onTabSelect={onOptionSelect}
+                onTabDelete={onTabBtnDelete}
+                place={place}
+              />
+            ))}
+      </Flex>
       <Center mb="md">
-        <Button disabled={!area} data-umami-event={`${area.toLowerCase()}`} onClick={findSchedule}>
+        <Button
+          disabled={!area}
+          data-umami-event={`${area.toLowerCase()}`}
+          onClick={() => {
+            handleRecentSearches();
+            findSchedule(area);
+          }}
+        >
           Find Schedule
         </Button>
       </Center>
