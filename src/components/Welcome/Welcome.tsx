@@ -5,7 +5,7 @@ import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 export function Welcome() {
   return (
     <>
-      <Title order={4} className={classes.title} ta="center" mt={100}>
+      <Title order={4} className={classes.title} ta="center" mt={70}>
         <Text
           size="lg"
           inherit

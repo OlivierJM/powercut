@@ -3,6 +3,7 @@ import { IconX } from '@tabler/icons-react';
 import ScheduleCard from './ScheduleCard';
 import RecentSearchTab from '../RecentSearch/RecentSearch';
 import { useFinder } from './useFinder';
+import RandomQuote from '../RandomQuote/RandomQuote';
 
 const Finder = () => {
   const {
@@ -74,7 +75,7 @@ const Finder = () => {
       <Center mb="md">
         <Button
           disabled={!area}
-          data-umami-event={`${area.toLowerCase()}`}
+          // data-umami-event={`${area.toLowerCase()}`} // temporarily disable tracking searched places
           onClick={() => {
             handleRecentSearches();
             findSchedule(area);
@@ -91,6 +92,8 @@ const Finder = () => {
           ))
         : null}
 
+      <RandomQuote />
+      <br />
       <Text size="sm" mt={10} ta="center" c="dimmed">
         Disclaimer: The schedule used here is{' '}
         <a href="https://www.zesco.co.zm/assets/LoadManagement/ZESCO_8_hr_Loadshedding%20_Schedule_final.pdf">
