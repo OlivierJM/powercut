@@ -7,3 +7,9 @@ export interface ScheduleCardProps {
   };
   province: string;
 }
+
+export interface QuoteType {
+  id: string;
+  content: string;
+  author: string;
+}
