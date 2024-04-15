@@ -24,7 +24,6 @@ const Finder = () => {
     <Container my={40} p={2}>
       <Autocomplete
         placeholder="Search for an area..."
-        data-umami-event="search-area"
         data={allAreas}
         value={area}
         onChange={(value) => {
