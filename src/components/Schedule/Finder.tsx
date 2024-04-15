@@ -49,29 +49,29 @@ const Finder = () => {
         size="md"
         mb="md"
       />
-      <Flex
-        mih={50}
-        gap="xs"
-        justify="center"
-        align="center"
-        direction="row"
-        wrap="wrap"
-        style={{
-          marginBottom: '10px',
-        }}
-      >
-        {recentSearches &&
-          recentSearches
-            .split('|')
-            .map((place) => (
-              <RecentSearchTab
-                key={place}
-                onTabSelect={onOptionSelect}
-                onTabDelete={onTabBtnDelete}
-                place={place}
-              />
-            ))}
-      </Flex>
+      {recentSearches && (
+        <Flex
+          mih={50}
+          gap="xs"
+          justify="center"
+          align="center"
+          direction="row"
+          wrap="wrap"
+          style={{
+            marginBottom: '10px',
+          }}
+        >
+          {recentSearches.split('|').map((place) => (
+            <RecentSearchTab
+              key={place}
+              onTabSelect={onOptionSelect}
+              onTabDelete={onTabBtnDelete}
+              place={place}
+            />
+          ))}
+        </Flex>
+      )}
+
       <Center mb="md">
         <Button
           disabled={!area}
@@ -84,14 +84,12 @@ const Finder = () => {
           Find Schedule
         </Button>
       </Center>
-      <br />
 
       {upcomingSchedules.length && area
         ? upcomingSchedules.map((schedule, index) => (
             <ScheduleCard key={index} data={schedule} province={currentProvince} />
           ))
         : null}
-
       <RandomQuote />
       <br />
       <Text size="sm" mt={10} ta="center" c="dimmed">

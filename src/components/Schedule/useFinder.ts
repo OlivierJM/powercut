@@ -15,10 +15,8 @@ export const useFinder = () => {
 
   const allAreas = useMemo(() => {
     const allAreasList = [] as string[];
-    Object.values(areas).forEach((groups) => {
-      Object.values(groups).forEach((areaList) => {
-        allAreasList.push(...areaList);
-      });
+    Object.values(areas['Lusaka Province']).forEach((areaList) => {
+      allAreasList.push(...areaList);
     });
     return [...new Set(allAreasList)].sort();
   }, []);
