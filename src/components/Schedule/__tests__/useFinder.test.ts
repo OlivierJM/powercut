@@ -2,22 +2,22 @@ import { renderHook, act } from '@test-utils';
 import { useFinder } from '../useFinder';
 // TODO: Update this with more test cases
 vi.mock('@/data/areas.json', async () => {
-    const actual = await vi.importActual('@/data/areas.json');
-    return {
-      ...actual,
-      Province1: {
-        Group1: ['6 MILES', 'Area2'],
-        Group2: ['Area3', 'Area4'],
-      },
-    };
-  });
+  const actual = await vi.importActual('@/data/areas.json');
+  return {
+    ...actual,
+    Province1: {
+      Group1: ['6 MILES', 'Area2'],
+      Group2: ['Area3', 'Area4'],
+    },
+  };
+});
 
 vi.mock('@/data/schedule.json', async () => {
-    const actual = await vi.importActual('@/data/schedule.json');
-    return {
-      ...actual,
-    };
-  });
+  const actual = await vi.importActual('@/data/schedule.json');
+  return {
+    ...actual,
+  };
+});
 
 describe('useFinder', () => {
   it('should set area and find schedule when onOptionSelect is called', () => {
