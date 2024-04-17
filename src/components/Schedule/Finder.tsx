@@ -92,7 +92,7 @@ const Finder = () => {
       <RandomQuote />
       <br />
       <Text size="sm" mt={10} ta="center" c="dimmed">
-        Disclaimer: This schedule may not be 100% accurate. 
+        Disclaimer: This schedule may not be 100% accurate.
       </Text>
 
       <br />
