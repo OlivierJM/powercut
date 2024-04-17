@@ -75,7 +75,6 @@ const Finder = () => {
       <Center mb="md">
         <Button
           disabled={!area}
-          // data-umami-event={`${area.toLowerCase()}`} // temporarily disable tracking searched places
           onClick={() => {
             handleRecentSearches();
             findSchedule(area);
@@ -93,11 +92,7 @@ const Finder = () => {
       <RandomQuote />
       <br />
       <Text size="sm" mt={10} ta="center" c="dimmed">
-        Disclaimer: The schedule used here is{' '}
-        <a href="https://www.zesco.co.zm/assets/LoadManagement/ZESCO_8_hr_Loadshedding%20_Schedule_final.pdf">
-          prepared by Zesco
-        </a>
-        {'  '}and may not be 100% accurate.
+        Disclaimer: This schedule may not be 100% accurate.
       </Text>
 
       <br />
